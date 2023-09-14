@@ -1,6 +1,6 @@
 export const friendsInfo = [
   {
-    avatar: "https://github.com/ZzzRemake.png",
+    avatar: "https://avatars.githubusercontent.com/u/108183563?v=4",
     name: "ZzzRemake",
     title: "🚀 全能 🐳",
     link: "https://zzzremake.github.io/",
@@ -8,7 +8,7 @@ export const friendsInfo = [
     color: "indigo",
   },
   {
-    avatar: "https://www.github.com/yaossg.png",
+    avatar: "https://avatars.githubusercontent.com/u/29620619?v=4",
     name: "Yaossg",
     title: "强大的计算机科学家🧐",
     link: "https://Yaossg.com",
@@ -16,7 +16,7 @@ export const friendsInfo = [
     color: "pink",
   },
   {
-    avatar: "https://github.com/nyml2003.png",
+    avatar: "https://avatars.githubusercontent.com/u/106670529?v=4",
     name: "风唤长河",
     title: "懂不懂全栈开发の含金量",
     link: "https://ventusvocatflumen.cn/",
@@ -59,7 +59,7 @@ export const friendsInfo = [
     avatar: "https://avatars.githubusercontent.com/u/102424651?v=4",
     name: "安娜苏",
     title: "要是我也会算法就好了😍",
-    link: "https://www.cnblogs.com/timlzh",
+    link: "https://je3ter.github.io/",
     tag: "ACMer",
     color: "sky",
   },
