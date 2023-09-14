@@ -1,69 +1,33 @@
 <template>
   <VPTeamPage>
     <VPTeamPageTitle>
-      <template #title>🎨 My Friends 🙌</template>
-      <template #lead>...</template>
+      <template #title>🎨 Friends 🙌</template>
+      <template #lead>Awsome Friends from Diverse Fields of Expertise</template>
     </VPTeamPageTitle>
-    <VPTeamMembers size="small" :members="members" />
-    <FriendsCard v-bind="friendsInfo[0]"></FriendsCard>
+    <div class="px-6 md:px-12 lg:px-16">
+      <div class="FriendsContent">
+        <FriendsCard
+          v-for="(item, index) in friendsInfo"
+          :key="index"
+          v-bind="item"
+        ></FriendsCard>
+      </div>
+    </div>
   </VPTeamPage>
 </template>
 
 <script setup>
-import {
-  VPTeamPage,
-  VPTeamPageTitle,
-  VPTeamMembers,
-  VPTeamPageSection,
-} from "vitepress/theme";
-
+import { VPTeamPage, VPTeamPageTitle, VPTeamMembers } from "vitepress/theme";
+import { friendsInfo } from "./data/friendsInfo";
 import FriendsCard from "./FriendsCard.vue";
-
-const friendsInfo = [
-  {
-    avatar: "https://www.github.com/yaossg.png",
-    name: "Yaossg",
-    title: "Frontend Engineer",
-    link: "https://Yaossg.com",
-  },
-];
-
-const members = [
-  {
-    avatar: "https://www.github.com/yaossg.png",
-    name: "Evan You",
-    title: "Creator",
-    links: [
-      { icon: "github", link: "https://github.com/yyx990803" },
-      { icon: "twitter", link: "https://twitter.com/youyuxi" },
-    ],
-  },
-  {
-    avatar: "https://www.github.com/zbwer.png",
-    name: "Evan You",
-    title: "Creator",
-    links: [
-      { icon: "github", link: "https://github.com/yyx990803" },
-      { icon: "twitter", link: "https://twitter.com/youyuxi" },
-    ],
-  },
-  {
-    avatar: "https://www.github.com/Timlzh.png",
-    name: "Evan You",
-    title: "Creator",
-    links: [
-      { icon: "github", link: "https://github.com/yyx990803" },
-      { icon: "twitter", link: "https://twitter.com/youyuxi" },
-    ],
-  },
-  {
-    avatar: "https://www.github.com/zzzRemake.png",
-    name: "Evan You",
-    title: "Creator",
-    links: [
-      { icon: "github", link: "https://github.com/yyx990803" },
-      { icon: "twitter", link: "https://twitter.com/youyuxi" },
-    ],
-  },
-];
 </script>
+
+<style scoped>
+.FriendsContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+  max-width: 1152px;
+  gap: 24px;
+  margin: 0 auto;
+}
+</style>
