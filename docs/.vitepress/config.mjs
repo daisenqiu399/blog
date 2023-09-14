@@ -11,20 +11,27 @@ export default defineConfig({
     logo: "/logo.svg",
     // 顶部导航栏
     nav: [
-      { text: "Blogs", link: "/markdown-examples" },
-      { text: "Projects", link: "/markdown-examples" },
-      { text: "Friends", link: "/markdown-examples" },
+      { text: "Blogs", link: "/Notes/index" },
+      { text: "Projects", link: "/Project/index" },
+      { text: "Friends", link: "Friends.md" },
     ],
     // 文章页面左侧导航
-    sidebar: [
-      {
-        text: "Examples",
-        items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
-        ],
-      },
-    ],
+    sidebar: {
+      "/Notes/": [
+        {
+          text: "字节跳动",
+          link: "/Notes/",
+          items: [
+            {
+              text: "商业化技术",
+              link: "/Notes/面试考点",
+              items: [{ text: "一轮", link: "/Notes/面试考点" }],
+            },
+          ],
+          collapsed: false,
+        },
+      ],
+    },
     // 是否启动搜索功能
     search: {
       provider: "local",
