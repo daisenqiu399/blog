@@ -64,4 +64,13 @@ function openLink() {
     hsl(0 0% 95%) 14px
   );
 }
+.dark .bg-stripe:hover {
+  background-image: repeating-linear-gradient(
+    45deg,
+    hsl(202, 80%, 24%),
+    hsl(202, 80%, 24%) 13px,
+    hsl(200, 80%, 20%) 13px,
+    hsl(200, 80%, 20%) 14px
+  );
+}
 </style>
