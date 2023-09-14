@@ -13,4 +13,7 @@
     #d939cd 100%
   );
   --vp-home-hero-image-filter: blur(100px);
+  /* brand按钮 */
+  --vp-button-brand-bg: rgb(56, 189, 248);
+  --vp-button-brand-hover-bg: rgb(14, 165, 233);
 }
