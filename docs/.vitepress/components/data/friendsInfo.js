@@ -63,4 +63,20 @@ export const friendsInfo = [
     tag: "ACMer",
     color: "sky",
   },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/119086094?v=4",
+    name: "破酥",
+    title: "鲜嫩可口的软工学弟🥵",
+    link: "https://cainhappyfish.github.io/",
+    tag: "UESTCer",
+    color: "green",
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/102564564?v=4",
+    name: "Annmy",
+    title: "光电の神",
+    link: "https://yhblogs.cn/about/",
+    tag: "UESTCer",
+    color: "orange",
+  },
 ];
