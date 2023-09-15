@@ -58,7 +58,7 @@
           </div>
           <!-- 箴言 -->
           <div
-            class="dark:border-slate-900 dark:bg-slate-800 md:w-[39%] w-full rounded-xl border p-4 bg-slate-50"
+            class="bg-stripe dark:border-slate-900 dark:bg-slate-800 md:w-[39%] w-full rounded-xl border p-4 bg-slate-50"
           >
             <p class="text-[12px]">箴言</p>
             <div>
@@ -89,7 +89,7 @@
       >
         <!-- 简介 -->
         <div
-          class="w-full md:w-[35%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
+          class="bg-stripe w-full md:w-[35%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
         >
           <p class="text-[12px]">简介</p>
           <div class="mt-2">
@@ -201,10 +201,97 @@
       <div
         class="flex flex-col justify-between w-full gap-5 mt-4 md:gap-0 md:flex-row"
       >
-        <div class="w-full md:w-[40%] honer-bg rounded-xl h-56"></div>
+        <!-- 图片 -->
         <div
-          class="w-full md:w-[55%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
+          class="w-full md:w-[45%] honer-bg bg-center bg-no-repeat bg-cover rounded-xl h-52 sm:h-auto"
         ></div>
+        <!-- 荣誉 -->
+        <div
+          class="bg-stripe w-full md:w-[50%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
+        >
+          <p class="text-[12px]">荣誉墙</p>
+          <h1 class="mt-2 text-4xl font-bold">追风赶月</h1>
+          <div class="mt-4 text-lg md:text-base lg:text-xl">
+            <p class="py-1">🏅 "创新创意创业"挑战赛省一等奖</p>
+            <p class="py-1">🥉 蓝桥杯 Web 开发组国家三等奖</p>
+            <p class="py-1">🥉 字节跳动前端青训大项目三等奖</p>
+          </div>
+        </div>
+      </div>
+      <!-- 音乐/游戏 -->
+      <div
+        class="flex flex-col justify-between w-full gap-5 mt-4 md:gap-0 md:flex-row"
+      >
+        <!-- 音乐 -->
+        <div
+          class="w-full md:w-[39%] rounded-xl min-h-[13rem] h-52 md:h-auto relative overflow-hidden sm:h-auto"
+        >
+          <div
+            class="absolute w-full h-full bg-center bg-no-repeat bg-cover music-bg -z-10"
+          ></div>
+          <div class="p-4">
+            <p class="text-[12px] text-slate-200">音乐喜好</p>
+            <h1 class="mt-1.5 text-4xl font-bold text-white">古典</h1>
+            <h1 class="mt-1.5 text-4xl font-bold text-white">欧美流行、</h1>
+            <h1 class="mt-1.5 text-4xl font-bold text-white">轻音乐</h1>
+            <p class="text-sm text-right text-slate-100">《Love Stroy》</p>
+          </div>
+        </div>
+        <!-- 游戏 -->
+        <div
+          class="relative w-full md:min-h-[13rem] h-52 md:h-auto md:w-[59%] overflow-hidden rounded-xl"
+        >
+          <div
+            class="absolute w-full h-full bg-center bg-no-repeat bg-cover game-bg -z-10"
+          ></div>
+          <div class="flex flex-col justify-between h-full p-4">
+            <p class="text-[12px] text-slate-50">电子竞技</p>
+            <h1 class="flex-1 mt-2 text-4xl font-bold text-white">
+              赛博种田 / FPS
+            </h1>
+            <p class="self-end mt-2 text-sm text-right text-slate-100">
+              守望先锋 / FarmTogether
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 运动/电影 -->
+      <div
+        class="flex flex-col justify-between w-full gap-5 mt-4 md:gap-0 md:flex-row"
+      >
+        <!-- 电影 -->
+        <div
+          class="relative w-full md:min-h-[18rem] h-72 overflow-hidden md:w-[58%] rounded-xl"
+        >
+          <div
+            class="absolute w-full bg-center bg-no-repeat bg-cover h-72 movie-bg -z-10"
+          ></div>
+          <div class="flex flex-col justify-between h-full p-4">
+            <p class="text-[12px] text-slate-50">兴趣爱好</p>
+            <h1 class="flex-1 mt-2 text-4xl font-bold text-white">
+              科幻 / <br />动漫影视剧
+            </h1>
+            <p class="self-end mt-2 text-sm text-right text-slate-100">
+              “不作恶,不快活！” ——《坏蛋联盟》
+            </p>
+          </div>
+        </div>
+        <!-- 运动 -->
+        <div
+          class="relative w-full md:min-h-[18rem] h-72 overflow-hidden md:w-[40%] rounded-xl"
+        >
+          <div
+            class="absolute w-full bg-center bg-no-repeat bg-cover h-72 sport-bg -z-10"
+          ></div>
+          <div class="flex flex-col justify-between h-full p-4">
+            <p class="text-[12px] text-slate-50">体育运动</p>
+            <h1 class="flex-1 mt-2 text-4xl font-bold text-white">足球</h1>
+            <p class="self-end mt-2 text-sm text-right text-slate-100">
+              欢迎来到梅西走廊！
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -215,8 +302,22 @@
 <style scoped>
 .honer-bg {
   background-image: url("./img/honer.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+.music-bg {
+  background-image: url("./img/music.jpg");
+  filter: brightness(0.6);
+}
+.game-bg {
+  background-image: url("./img/game.png");
+  filter: brightness(0.8);
+}
+.sport-bg {
+  background-image: url("./img/sport.jpg");
+  filter: brightness(0.6);
+}
+.movie-bg {
+  background-image: url("./img/movie.jpg");
+  filter: brightness(0.6);
 }
 .avatar-ping {
   animation: avatarPing 2s ease-in infinite;

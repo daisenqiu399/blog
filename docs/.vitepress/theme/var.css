@@ -17,3 +17,23 @@
   --vp-button-brand-bg: rgb(56, 189, 248);
   --vp-button-brand-hover-bg: rgb(14, 165, 233);
 }
+
+.bg-stripe:hover {
+  background-image: repeating-linear-gradient(
+    45deg,
+    hsl(0 0% 100%),
+    hsl(0 0% 100%) 13px,
+    hsl(0 0% 95%) 13px,
+    hsl(0 0% 95%) 14px
+  );
+}
+
+.dark .bg-stripe:hover {
+  background-image: repeating-linear-gradient(
+    45deg,
+    hsl(202, 80%, 24%),
+    hsl(202, 80%, 24%) 13px,
+    hsl(200, 80%, 20%) 13px,
+    hsl(200, 80%, 20%) 14px
+  );
+}
