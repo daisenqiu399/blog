@@ -11,8 +11,8 @@ export default defineConfig({
     logo: "/logo.svg",
     // 顶部导航栏
     nav: [
-      { text: "Blogs", link: "/Notes/index" },
       { text: "About", link: "/AboutMe.md" },
+      { text: "Blogs", link: "/Notes/index" },
       { text: "Projects", link: "/Project/index" },
       { text: "Friends", link: "Friends.md" },
     ],

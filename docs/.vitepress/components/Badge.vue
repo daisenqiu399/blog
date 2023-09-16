@@ -7,7 +7,6 @@
 <script setup>
 import { computed } from "vue";
 const { color } = defineProps(["color"]);
-console.log(color);
 const getColor = computed(() => {
   switch (color) {
     case "sky":
