@@ -1,4 +1,8 @@
 ---
-outline: deep
+layout: page
 ---
-# Welcome To My Projects
+<script setup>
+import Projects from "../../.vitepress/components/Projects.vue";
+</script>
+
+<Projects/>
