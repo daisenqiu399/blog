@@ -14,5 +14,9 @@
       "tailwindcss": {},
       "autoprefixer": {}
     }
+  },
+  "dependencies": {
+    "dayjs": "^1.11.9",
+    "gray-matter": "^4.0.3"
   }
 }

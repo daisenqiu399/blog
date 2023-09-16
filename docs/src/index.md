@@ -26,7 +26,7 @@ features:
   - icon: 🦄
     title: Creative Tech Projects
     details: Dive into my innovative projects and playful creations.
-    link: /Project/index
+    link: /Projects
     linkText: '项目简历'
   - icon: 👫
     title: Community Connections
