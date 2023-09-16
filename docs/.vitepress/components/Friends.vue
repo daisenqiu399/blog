@@ -2,7 +2,9 @@
   <VPTeamPage>
     <VPTeamPageTitle>
       <template #title>🎨 Friends 🙌</template>
-      <template #lead>Awsome Friends from Diverse Fields of Expertise</template>
+      <template #lead
+        >Awesome Friends from Diverse Fields of Expertise</template
+      >
     </VPTeamPageTitle>
     <div class="px-6 md:px-12 lg:px-16">
       <div class="FriendsContent">
@@ -17,7 +19,7 @@
 </template>
 
 <script setup>
-import { VPTeamPage, VPTeamPageTitle, VPTeamMembers } from "vitepress/theme";
+import { VPTeamPage, VPTeamPageTitle } from "vitepress/theme";
 import { friendsInfo } from "./data/friendsInfo";
 import FriendsCard from "./FriendsCard.vue";
 </script>

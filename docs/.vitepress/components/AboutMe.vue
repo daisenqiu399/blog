@@ -54,7 +54,7 @@
             >
               A Chinese undergraduate From UESTC
             </h1>
-            <p class="text-slate-100">热衷于：前端开发 / 产品设计 / 足球 🔥</p>
+            <p class="text-slate-100">前端开发 / 产品设计 / 足球 🔥</p>
           </div>
           <!-- 箴言 -->
           <div
@@ -211,7 +211,7 @@
         >
           <p class="text-[12px]">荣誉墙</p>
           <h1 class="mt-2 text-4xl font-bold">追风赶月</h1>
-          <div class="mt-4 text-lg md:text-base lg:text-xl">
+          <div class="mt-4 md:text-base lg:text-xl">
             <p class="py-1">🏅 "创新创意创业"挑战赛省一等奖</p>
             <p class="py-1">🥉 蓝桥杯 Web 开发组国家三等奖</p>
             <p class="py-1">🥉 字节跳动前端青训大项目三等奖</p>
@@ -231,7 +231,7 @@
           ></div>
           <div class="p-4">
             <p class="text-[12px] text-slate-200">音乐喜好</p>
-            <h1 class="mt-1.5 text-4xl font-bold text-white">古典</h1>
+            <h1 class="mt-1.5 text-4xl font-bold text-white">古典、</h1>
             <h1 class="mt-1.5 text-4xl font-bold text-white">欧美流行、</h1>
             <h1 class="mt-1.5 text-4xl font-bold text-white">轻音乐</h1>
             <p class="text-sm text-right text-slate-100">《Love Stroy》</p>
