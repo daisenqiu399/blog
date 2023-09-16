@@ -1,9 +1,12 @@
 import { defineConfig } from "vitepress";
-
-// https://vitepress.dev/reference/site-config
+import { fileURLToPath, URL } from "node:url";
+import { getSidebar } from "./utils/getSidebar";
 export default defineConfig({
   title: "zbwer's Blog",
   titleTemplate: "zbwer",
+  // md 文件根目录
+  srcDir: "./src",
+  lastUpdated: true,
   description:
     "zbwer's tech blog: An undergraduate's journey through frontend development, sharing insights, tips, and experiences in web technologies.",
   head: [["link", { rel: "icon", href: "/logo.svg" }]],
@@ -11,27 +14,14 @@ export default defineConfig({
     logo: "/logo.svg",
     // 顶部导航栏
     nav: [
-      { text: "About", link: "/AboutMe.md" },
+      { text: "About", link: "AboutMe.md" },
       { text: "Blogs", link: "/Notes/index" },
-      { text: "Projects", link: "/Project/index" },
+      { text: "Projects", link: "Projects.md" },
       { text: "Friends", link: "Friends.md" },
     ],
     // 文章页面左侧导航
     sidebar: {
-      "/Notes/": [
-        {
-          text: "字节跳动",
-          link: "/Notes/",
-          items: [
-            {
-              text: "商业化技术",
-              link: "/Notes/面试考点",
-              items: [{ text: "一轮", link: "/Notes/面试考点" }],
-            },
-          ],
-          collapsed: false,
-        },
-      ],
+      "/Notes/": getSidebar(),
     },
     // 是否启动搜索功能
     search: {
@@ -45,7 +35,16 @@ export default defineConfig({
       copyright: "Copyright © 2023-present zbwer",
     },
   },
-  // md 文件根目录
-  srcDir: "./src",
-  lastUpdated: true,
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPDocFooterLastUpdated\.vue$/,
+          replacement: fileURLToPath(
+            new URL("./components/UpdateTime.vue", import.meta.url)
+          ),
+        },
+      ],
+    },
+  },
 });
