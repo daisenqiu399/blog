@@ -3,9 +3,9 @@ import matter from "gray-matter";
 
 // 笔记顶级分类
 export const COLS = [
-  { text: "面经分享", link: "/Interviews/" },
-  { text: "学习笔记", link: "/Learning/" },
-  { text: "随想杂文", link: "/Thoughts/" },
+  { text: "🏃 面经分享", link: "/Interviews/" },
+  { text: "🍩 学习笔记", link: "/Learning/" },
+  { text: "🔮 随想杂文", link: "/Thoughts/" },
 ];
 
 /**
