@@ -20,6 +20,7 @@ export const getSidebar = () => {
     const files = readdirSync(dir) || [];
     let colFiles = {
       text,
+      link: `/Notes${link}`,
       items: files
         .map((file) => {
           const path = `${dir}${file}`;
