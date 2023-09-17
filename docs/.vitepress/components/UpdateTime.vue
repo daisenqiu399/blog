@@ -13,7 +13,6 @@ const { frontmatter, page } = useData();
 
 const lastUpdated = computed(() => {
   // 禁用日期判定
-  console.log(frontmatter.value);
   if (frontmatter.value.lastUpdated === false) return "";
   // 优先取博文前的自定义时间日期 `updateTime`
   else if (frontmatter.value.updateTime) return frontmatter.value.updateTime;
