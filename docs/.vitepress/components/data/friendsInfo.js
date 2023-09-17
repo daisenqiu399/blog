@@ -87,4 +87,20 @@ export const friendsInfo = [
     tag: "FullStack",
     color: "indigo",
   },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/73600117?v=4",
+    name: "Chace Q",
+    title: "沙河一路工作室学长🤩",
+    link: "http://www.chaceq.love/",
+    tag: "UESTCer",
+    color: "pink",
+  },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/91458671?v=4",
+    name: "Rui1",
+    title: "Rui1可以浇浇我后端吗🌹",
+    link: "https://blog.ruinique.site/",
+    tag: "Backend",
+    color: "sky",
+  },
 ];
