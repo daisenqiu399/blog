@@ -103,4 +103,12 @@ export const friendsInfo = [
     tag: "Backend",
     color: "sky",
   },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/61999173?v=4",
+    name: "syrinka",
+    title: "⚡上行线路/下行线路⚡",
+    link: "https://blog.hareta.ren/blog",
+    tag: "CNSS / SA",
+    color: "indigo",
+  },
 ];
