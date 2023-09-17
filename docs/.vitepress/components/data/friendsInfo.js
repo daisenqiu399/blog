@@ -79,4 +79,12 @@ export const friendsInfo = [
     tag: "UESTCer",
     color: "orange",
   },
+  {
+    avatar: "https://mrcai.dev/_astro/avatar.a5e28833.webp",
+    name: "mrcaidev",
+    title: "为什么这么强好羡慕啊😭",
+    link: "https://mrcai.dev/",
+    tag: "FullStack",
+    color: "indigo",
+  },
 ];
