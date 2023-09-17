@@ -1,5 +1,5 @@
 <template>
-  <span class="badge text-slate-100 bg-gr" :class="getColor">
+  <span class="badge text-slate-100" :class="getColor">
     <slot>UESTCer</slot>
   </span>
 </template>
