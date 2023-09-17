@@ -26,5 +26,4 @@ import BlogPart from "./BlogPart.vue";
 
 const { site } = useData();
 const sidebarData = site.value.themeConfig.sidebar["/Notes/"];
-console.log(sidebarData);
 </script>
