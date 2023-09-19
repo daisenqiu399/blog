@@ -57,7 +57,7 @@
     <div v-if="columnData.items.length" class="flex justify-end pr-5">
       <div
         @click="openLink(columnData.link)"
-        class="flex items-center transition-all cursor-pointer text-black/50 hover:text-sky-500"
+        class="flex items-center transition-all cursor-pointer dark:text-slate-400 dark:hover:text-sky-400 text-black/50 hover:text-sky-500"
       >
         <p class="mr-1 text-sm">View More</p>
         <svg
