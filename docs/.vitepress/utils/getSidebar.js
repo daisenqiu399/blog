@@ -21,6 +21,7 @@ export const getSidebar = () => {
     let colFiles = {
       text,
       link: `/Notes${link}`,
+      collapsed: true,
       items: files
         .map((file) => {
           const path = `${dir}${file}`;
