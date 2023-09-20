@@ -2,6 +2,7 @@
 updateTime: "2023-09-19 20:15"
 desc: " Echarts 中同时设置 triggerEvent 与 tooltip 可能会出现奇怪的显示问题，文中给出了一个简单的解决方案并记录了 radar 雷达图组件多级数据的一个应用场景."
 tags: "Echarts"
+outline: deep
 ---
 
 ## 【Echarts】事件触发与富文本的奇妙反应.
