@@ -26,6 +26,9 @@ export const getSidebar = () => {
         .map((file) => {
           const path = `${dir}${file}`;
           const filename = file.replace(/\.md$/, "");
+          // 剔除非md文件
+          if (file === filename)
+            return { text: "Not md File", link: "Error Link" };
           const filepath = `/Notes${link}${filename}`;
           const { data = {} } = matter.read(path) || {};
           return {
@@ -34,7 +37,10 @@ export const getSidebar = () => {
             link: filepath,
           };
         })
-        .filter(({ text, link }) => link.indexOf(INDEX_FILE) === -1)
+        .filter(
+          ({ text, link }) =>
+            text !== "Not md File" && link.indexOf(INDEX_FILE) === -1
+        )
         .sort((a, b) => {
           const av = a["updateTime"] ? new Date(a["updateTime"]).valueOf() : 0;
           const bv = b["updateTime"] ? new Date(b["updateTime"]).valueOf() : 0;

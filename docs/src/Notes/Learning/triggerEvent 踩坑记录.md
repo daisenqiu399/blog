@@ -9,7 +9,7 @@ outline: deep
 
 在前几天使用 Echarts 的雷达图时，遇到了一个奇怪的问题，当 `radar` 设置了 `triggerEvent:true` 并且 `axisName` 使用的是富文本标签时，会出现下图中的情况.
 
-![echartsTragger0](../../assets/Notes/Learning/echartsTragger0.jpg)
+![echartsTragger0](./img/echartsTragger0.jpg)
 
 ### 解决方案
 
