@@ -2,9 +2,12 @@ import DefaultTheme from "vitepress/theme";
 import "./tailwind.css";
 import "./var.css";
 import "./artical.css";
-// import MyLayout from "../components/MyLayout.vue";
+
+import LinkCard from "../components/LinkCard.vue";
 
 export default {
-  ...DefaultTheme,
-  //   Layout: MyLayout,
+  extends: DefaultTheme,
+  enhanceApp(ctx) {
+    ctx.app.component("LinkCard", LinkCard);
+  },
 };
