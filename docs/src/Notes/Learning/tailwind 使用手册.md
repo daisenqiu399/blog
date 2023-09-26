@@ -5,6 +5,8 @@ tags: "tailwind/手册"
 desc: "一文掌握目前最火的原子化 css 解决方案。你将了解到如何在项目中引入 TailwindCss，以及较为常用的基础语法。"
 ---
 
+>一文掌握目前最火的原子化 css 解决方案。你将了解到如何在项目中引入TailwindCss，以及较为常用的基础语法。
+
 TailwindCSS 是一种实用的原子化 CSS 框架，它提供了一套丰富的预定义类，使开发人员可以通过组合这些类来构建用户界面。在笔者看来，其主要的优势有两点：
 
 1. **⚙️ 实用高效**：Tailwind 提供了数千个用于构建用户界面的实用 CSS 类，包括颜色、字体、边距、填充、网格、灵活布局、阴影、动画等。“不需要离开HTML，即可开发现代Web应用”。例如我可以通过 `line-clamp-3` 快速实现多行文字溢出省略的效果，如果使用普通的 CSS 我可能需要四到五行。又例如我可以通过 `md:` 或者 `dark` 等前缀快速编写响应式 / 暗黑主题的样式。
@@ -12,7 +14,8 @@ TailwindCSS 是一种实用的原子化 CSS 框架，它提供了一套丰富的
 
 ## 📚 快速开始
 
-安装 TailwindCSS 的所有方式可以参考官方文档：[Installation - Taiwind Css](https://tailwindcss.com/docs/installation)
+安装 TailwindCSS 的所有方式可以参考官方文档：
+<LinkCard desc="Installation - Taiwind Css" link="https://tailwindcss.com/docs/installation" />
 
 在本文中笔者会对其中三种方法展开介绍。
 
@@ -88,7 +91,8 @@ module.exports = {
 2. `components` ：插入由 @apply 指令生成的所有组件样式。这些通常是你在项目中定义的复用的、定制的组件，例如按钮、卡片、表单等。（其实笔者也没用过😜）
 3. `utilities` ：插入所有的实用程序类，这是 Tailwind 的主要部分，包括颜色、字体、间距、布局、阴影等所有的实用程序类。
 
-官方文档的解释在这里：[Directives - Tailwind Css](https://tailwindcss.com/docs/functions-and-directives#tailwind)
+官方文档的解释在这里：
+<LinkCard desc="Directives - Tailwind Css" link="https://tailwindcss.com/docs/functions-and-directives#tailwind" />
 
 4. **愉快地使用**
 
