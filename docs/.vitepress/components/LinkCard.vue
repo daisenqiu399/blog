@@ -1,7 +1,7 @@
 <template>
   <div
     @click="openLink"
-    class="link-card my-2 p-4 transition-all duration-300 rounded-lg shadow-md cursor-pointer hover:bg-sky-100/80 dark:shadow-sky-700/80 hover:scale-[0.99] shadow-sky-400/30 dark:bg-sky-950 dark:hover:bg-sky-950/80 bg-sky-50 group"
+    class="link-card my-3 p-4 transition-all duration-300 rounded-lg shadow-md cursor-pointer hover:bg-sky-100/80 dark:shadow-sky-900/80 hover:scale-[0.99] shadow-sky-400/30 dark:bg-sky-950 dark:hover:bg-sky-950/80 bg-sky-100/50 group"
   >
     <header class="text-xl">🐳 {{ desc }}</header>
     <footer

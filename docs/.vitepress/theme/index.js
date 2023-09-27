@@ -1,7 +1,8 @@
 import DefaultTheme from "vitepress/theme";
 import "./tailwind.css";
 import "./var.css";
-import "./artical.css";
+import "./article.css";
+import "./print.css";
 
 import LinkCard from "../components/LinkCard.vue";
 
