@@ -12,7 +12,7 @@
 }
 
 /* 总体背景 */
-.VPDoc {
+.VPContent.has-sidebar {
   background-position: 50%;
   background-size: 20px 20px;
   background-image: linear-gradient(
