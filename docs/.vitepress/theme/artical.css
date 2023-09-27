@@ -142,18 +142,19 @@
 /* 强制显示背景色 */
 .vp-doc {
   print-color-adjust: exact;
-  @apply print:leading-normal;
-}
-
-/* 正文大小 */
-.vp-doc p {
-  @apply print:text-sm;
+  @apply print:leading-normal print:text-sm;
 }
 
 /* 自定义组件 */
 .vp-doc .link-card,
 .vp-doc .custom-block {
   @apply my-2 print:break-inside-avoid;
+}
+
+/* 代码换行 */
+.vp-adaptive-theme .vp-code-dark code,
+.vp-adaptive-theme .vp-code-light code {
+  @apply print:w-auto print:whitespace-pre-wrap;
 }
 
 /* 边距设置 */
