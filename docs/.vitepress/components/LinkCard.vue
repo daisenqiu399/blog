@@ -1,11 +1,11 @@
 <template>
   <div
     @click="openLink"
-    class="p-4 transition-all duration-300 border border-transparent rounded-lg cursor-pointer dark:bg-sky-950 dark:hover:border-sky-600 bg-sky-50 group hover:border-sky-800"
+    class="link-card my-2 p-4 transition-all duration-300 rounded-lg shadow-md cursor-pointer hover:bg-sky-100/80 dark:shadow-sky-700/80 hover:scale-[0.99] shadow-sky-400/30 dark:bg-sky-950 dark:hover:bg-sky-950/80 bg-sky-50 group"
   >
     <header class="text-xl">🐳 {{ desc }}</header>
     <footer
-      class="mt-1 transition-all duration-300 text-slate-500 dark:text-slate-400 dark:group-hover:text-sky-400 group-hover:text-sky-700 line-clamp-1"
+      class="mt-1 transition-all duration-300 text-slate-500 dark:text-slate-400 dark:group-hover:text-sky-400 group-hover:text-sky-500 line-clamp-1"
     >
       {{ link }}
     </footer>

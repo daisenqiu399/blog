@@ -114,3 +114,52 @@
 .vp-doc td {
   min-width: 120px;
 }
+
+/* 打印设置 */
+
+/* 隐藏顶部导航，侧边栏，尾部 */
+.VPDocFooter,
+.VPNav,
+.VPLocalNav,
+.VPDocAside,
+.VPSidebar {
+  @apply print:hidden !important;
+}
+
+/* 二级标题分割页面 */
+.vp-doc h2 {
+  @apply print:break-before-page;
+}
+
+/* 调整边距 */
+.vp-doc h3 {
+  @apply print:mt-4;
+}
+.vp-doc p {
+  @apply print:my-1;
+}
+
+/* 强制显示背景色 */
+.vp-doc {
+  print-color-adjust: exact;
+  @apply print:leading-normal;
+}
+
+/* 正文大小 */
+.vp-doc p {
+  @apply print:text-sm;
+}
+
+/* 自定义组件 */
+.vp-doc .link-card,
+.vp-doc .custom-block {
+  @apply my-2 print:break-inside-avoid;
+}
+
+/* 边距设置 */
+@page {
+  margin: 1cm 0cm;
+}
+@page :first {
+  margin-top: 0;
+}
