@@ -20,23 +20,25 @@
 .vp-doc h6 {
   color: var(--dora-text-indigo);
   letter-spacing: 0.1em;
+  @apply line-clamp-1;
 }
 
 .vp-doc h1 {
   padding-bottom: 0.5rem;
   border-bottom: 4px solid var(--dora-border-indigo);
   width: fit-content;
-  transition: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
+  @apply transition-all duration-300;
 }
 .vp-doc h1:hover {
   padding-right: 1.75rem;
 }
 
 .vp-doc h2 {
-  margin-top: 20px;
-  border-top: 1px solid var(--dora-border-indigo);
+  margin-top: 10px;
+  border-bottom: 3px solid var(--dora-border-indigo);
+  width: fit-content;
+  padding-bottom: 4px;
+  border-top: 0px solid var(--dora-border-indigo);
 }
 
 /* 引用 */
