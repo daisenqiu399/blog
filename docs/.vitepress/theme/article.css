@@ -139,3 +139,7 @@
 .VPDocFooter .prev-next .pager-link {
   @apply bg-zinc-50/70 dark:bg-zinc-900;
 }
+
+.vp-doc hr {
+  border-color: var(--dora-border-indigo);
+}
