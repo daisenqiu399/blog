@@ -142,6 +142,28 @@ rollup({
 });
 ```
 
+- `rollup-plugin-typescript2`
+
+让你能够在 Rollup 打包过程中使用 TypeScript。你可以自定义 TypeScript 编译选项，例如指定一个 `tsconfig.json` 文件，又或者动态覆盖`tsconfig.json`中的内容。
+
+```js
+import typescript from "rollup-plugin-typescript2";
+
+rollup({
+  ...
+  plugins: [
+    typescript({
+      tsconfig: resolve("tsconfig.json"),
+        tsconfigOverride: {
+          compilerOptions: {
+          target: isBrowserBuild ? "es5" : "es6",
+         },
+      },
+    })
+  ],
+});
+```
+
 ## 📚 浅析 Vue 构建过程
 
 Vue3 源码仓库地址：
