@@ -1,11 +1,7 @@
 :root {
   /* 标题 */
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #bd34fe,
-    #41d1ff
-  );
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
   /* 图标背景 */
   --vp-home-hero-image-background-image: linear-gradient(
     135deg,
@@ -18,6 +14,7 @@
   --vp-button-brand-hover-bg: rgb(14, 165, 233);
 }
 
+/* 条纹背景 */
 .bg-stripe:hover {
   background-image: repeating-linear-gradient(
     45deg,
@@ -36,4 +33,8 @@
     hsl(200, 80%, 20%) 13px,
     hsl(200, 80%, 20%) 14px
   );
+}
+
+.VPContent {
+  @apply flex flex-col;
 }
