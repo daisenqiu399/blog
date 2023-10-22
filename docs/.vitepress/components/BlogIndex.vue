@@ -10,7 +10,7 @@
     <div class="px-6 md:px-12 lg:px-16">
       <div class="flex flex-col gap-6">
         <BlogPart
-          v-for="(item, index) in sidebarData"
+          v-for="(item, index) in sidebarData.items"
           :key="index"
           :columnData="item"
         ></BlogPart>
@@ -26,4 +26,9 @@ import BlogPart from "./BlogPart.vue";
 
 const { site } = useData();
 const sidebarData = site.value.themeConfig.sidebar["/Notes/"];
+
+/** TODO:
+ * 重写归档页面，参考官方文档 API：
+ * https://skewb.gitee.io/vitepress/guide/data-loading.html#createcontentloader
+ */
 </script>

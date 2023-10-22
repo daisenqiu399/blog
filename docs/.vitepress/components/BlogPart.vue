@@ -9,7 +9,7 @@
     <div class="flex flex-col mb-4 lg:flex-row">
       <!-- 最近更新的三篇文章 -->
       <li
-        v-if="!columnData.items.length"
+        v-if="!latestThreeArticle.length"
         class="w-full mt-6 list-none lg:px-2 lg:w-[33%]"
       >
         <div
@@ -21,7 +21,7 @@
 
       <li
         @click="openLink(item.link)"
-        v-for="(item, index) in columnData.items.slice(0, 3)"
+        v-for="(item, index) in latestThreeArticle"
         :key="index"
         class="mt-6 lg:px-2 list-none min-w-full lg:min-w-[33%] flex-1 cursor-pointer"
       >
@@ -54,7 +54,7 @@
         </div>
       </li>
     </div>
-    <div v-if="columnData.items.length" class="flex justify-end pr-5">
+    <div v-if="latestThreeArticle.length" class="flex justify-end pr-5">
       <div
         @click="openLink(columnData.link)"
         class="flex items-center transition-all cursor-pointer dark:text-slate-400 dark:hover:text-sky-400 text-black/50 hover:text-sky-500"
@@ -79,9 +79,22 @@
 </template>
 
 <script setup>
-const { columnData } = defineProps(["columnData"]);
 import { useRouter } from "vitepress";
+import { computed } from "vue";
+
+const { columnData } = defineProps(["columnData"]);
 const router = useRouter();
+
+// 计算最新三篇更新的文章
+const latestThreeArticle = computed(() => {
+  let res = [...columnData.items];
+  res.sort((a, b) => {
+    const av = a["updateTime"] ? new Date(a["updateTime"]).valueOf() : 0;
+    const bv = b["updateTime"] ? new Date(b["updateTime"]).valueOf() : 0;
+    return bv - av;
+  });
+  return res.slice(0, 3);
+});
 
 // 格式化文章更新时间
 function getDateTime(item) {

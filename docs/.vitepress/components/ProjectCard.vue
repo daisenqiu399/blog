@@ -14,10 +14,7 @@
     <div class="p-4 pb-6">
       <div class="flex items-center justify-between">
         <h1 class="text-lg font-bold">{{ title }}</h1>
-        <p
-          class="text-[12px] px-2 rounded-full py-0.5"
-          :class="littleBadgeColor"
-        >
+        <p class="text-[12px] px-2 rounded-full py-0.5" :class="littleBadgeColor">
           {{ tag }}
         </p>
       </div>
@@ -32,13 +29,7 @@
 
 <script setup>
 import { computed } from "vue";
-const projectsInfo = defineProps([
-  "banner",
-  "title",
-  "description",
-  "link",
-  "tag",
-]);
+const projectsInfo = defineProps(["banner", "title", "description", "link", "tag"]);
 
 const littleBadgeColor = computed(() => {
   switch (projectsInfo.tag) {
@@ -61,9 +52,3 @@ function openLink() {
   window.open(projectsInfo.link, "_blank");
 }
 </script>
-
-<style scoped>
-.feishu-bg {
-  background-image: url(./img/gpt-feishu-bg.png);
-}
-</style>
