@@ -21,7 +21,7 @@ export default defineConfig({
     ],
     // 文章页面左侧导航
     sidebar: {
-      "/Notes/": getSidebar(),
+      "/Notes/": getSidebar("/docs/src", "/Notes/"),
     },
     // 是否启动搜索功能
     search: {
