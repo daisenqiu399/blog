@@ -3,7 +3,7 @@ layout: page
 ---
 
 <script setup>
-import Friends from '../.vitepress/components/Friends.vue'
+import Friends from '../.vitepress/views/Friends.vue'
 </script>
 
 <Friends/>

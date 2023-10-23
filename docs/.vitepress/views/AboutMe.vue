@@ -213,9 +213,9 @@
           class="w-full md:w-[39%] rounded-xl min-h-[13rem] h-52 md:h-auto relative overflow-hidden sm:h-auto"
         >
           <div
-            class="absolute w-full h-full bg-center bg-no-repeat bg-cover music-bg -z-10"
+            class="absolute w-full h-full bg-center bg-no-repeat bg-cover music-bg"
           ></div>
-          <div class="p-4">
+          <div class="relative z-10 p-4">
             <p class="text-[12px] text-slate-200">音乐喜好</p>
             <h1 class="mt-1.5 text-4xl font-bold text-white">古典、</h1>
             <h1 class="mt-1.5 text-4xl font-bold text-white">欧美流行、</h1>
@@ -228,9 +228,9 @@
           class="relative w-full md:min-h-[13rem] h-52 md:h-auto md:w-[59%] overflow-hidden rounded-xl"
         >
           <div
-            class="absolute w-full h-full bg-center bg-no-repeat bg-cover game-bg -z-10"
+            class="absolute w-full h-full bg-center bg-no-repeat bg-cover game-bg"
           ></div>
-          <div class="flex flex-col justify-between h-full p-4">
+          <div class="relative z-10 flex flex-col justify-between h-full p-4">
             <p class="text-[12px] text-slate-50">电子竞技</p>
             <h1 class="flex-1 mt-2 text-4xl font-bold text-white">赛博种田 / FPS</h1>
             <p class="self-end mt-2 text-sm text-right text-slate-100">
@@ -247,9 +247,9 @@
           class="relative w-full md:min-h-[18rem] h-72 overflow-hidden md:w-[58%] rounded-xl"
         >
           <div
-            class="absolute w-full bg-center bg-no-repeat bg-cover h-72 movie-bg -z-10"
+            class="absolute w-full bg-center bg-no-repeat bg-cover h-72 movie-bg"
           ></div>
-          <div class="flex flex-col justify-between h-full p-4">
+          <div class="relative z-10 flex flex-col justify-between h-full p-4">
             <p class="text-[12px] text-slate-50">兴趣爱好</p>
             <h1 class="flex-1 mt-2 text-4xl font-bold text-white">
               科幻 / <br />动漫影视剧
@@ -264,9 +264,9 @@
           class="relative w-full md:min-h-[18rem] h-72 overflow-hidden md:w-[40%] rounded-xl"
         >
           <div
-            class="absolute w-full bg-center bg-no-repeat bg-cover h-72 sport-bg -z-10"
+            class="absolute w-full bg-center bg-no-repeat bg-cover h-72 sport-bg"
           ></div>
-          <div class="flex flex-col justify-between h-full p-4">
+          <div class="relative flex flex-col justify-between h-full p-4">
             <p class="text-[12px] text-slate-50">体育运动</p>
             <h1 class="flex-1 mt-2 text-4xl font-bold text-white">足球</h1>
             <p class="self-end mt-2 text-sm text-right text-slate-100">

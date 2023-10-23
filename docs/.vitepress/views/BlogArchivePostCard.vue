@@ -1,7 +1,7 @@
 <template>
   <div
     @click="openLink(post.url)"
-    class="relative flex items-center gap-4 p-4 mt-4 transition-all bg-white border border-transparent rounded-lg cursor-pointer sm:pl-0 dark:bg-slate-800/80 first:mt-0 dark:hover:bg-sky-950/80 hover:border-indigo-400 dark:hover:border-sky-300"
+    class="relative flex items-center gap-4 p-4 mt-4 transition-all bg-white border border-transparent rounded-lg shadow-md cursor-pointer sm:pl-0 dark:bg-slate-800/80 first:mt-0 dark:hover:bg-sky-950/80 hover:scale-[0.98] dark:hover:scale-100 dark:hover:border-sky-300"
   >
     <p
       class="hidden pl-4 font-mono text-4xl sm:block text-sky-400/50 dark:text-slate-200/50"

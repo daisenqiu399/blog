@@ -4,7 +4,7 @@ layout: page
 
 <script setup>
 
-import AboutMe from '../.vitepress/components/AboutMe.vue'
+import AboutMe from '../.vitepress/views/AboutMe.vue'
 
 
 </script>

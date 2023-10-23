@@ -25,8 +25,7 @@ features:
 ---
 
 <script setup>
-import BlogIndex from '../../.vitepress/components/BlogIndex.vue'
-import BlogArchive from '../../.vitepress/components/BlogArchive.vue'
+import BlogArchive from '../../.vitepress/views/BlogArchive.vue'
 </script>
 
 <BlogArchive/>

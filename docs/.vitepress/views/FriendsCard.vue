@@ -29,16 +29,9 @@
 
 <script setup>
 import { computed } from "vue";
-import Badge from "./Badge.vue";
+import Badge from "../components/Badge.vue";
 
-const friendsInfo = defineProps([
-  "avatar",
-  "name",
-  "title",
-  "link",
-  "tag",
-  "color",
-]);
+const friendsInfo = defineProps(["avatar", "name", "title", "link", "tag", "color"]);
 
 const shortLink = computed(() => {
   let baseLink = friendsInfo.link;

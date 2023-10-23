@@ -6,11 +6,7 @@
     </VPTeamPageTitle>
     <div class="px-6 md:px-12 lg:px-16">
       <div class="ProjectsContent">
-        <ProjectCard
-          v-for="(item, index) in projectsInfo"
-          :key="index"
-          v-bind="item"
-        />
+        <ProjectCard v-for="(item, index) in projectsInfo" :key="index" v-bind="item" />
       </div>
     </div>
   </VPTeamPage>

@@ -1,7 +1,7 @@
 <template>
   <!-- 随机一言 -->
   <div
-    class="flex gap-2 py-2 bg-teal-100 rounded-lg shadow-md dark:bg-teal-950/80"
+    class="flex gap-2 py-2 rounded-lg shadow-md bg-amber-100 dark:bg-amber-950/80"
     v-if="quoteInfo.string"
   >
     <span class="self-start text-2xl">“</span>
@@ -19,7 +19,7 @@
   </div> -->
   <!-- 类别 -->
   <div
-    class="px-2 py-4 mt-6 shadow-md lg:sticky lg:top-20 bg-sky-100 rounded-xl dark:bg-sky-950/50"
+    class="px-2 py-4 mt-6 bg-white shadow-md lg:sticky lg:top-20 rounded-xl dark:bg-sky-950/50"
   >
     <h1 class="px-2 text-2xl font-extrabold leading-9 text-gray-900 dark:text-white">
       📚 Categories
