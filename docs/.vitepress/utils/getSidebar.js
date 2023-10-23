@@ -24,13 +24,11 @@ function generate(notesRootPath, pagePath, prefix = "", depth = 0) {
     items: [],
     collapsed: depth >= 2,
   };
-  const sidebarConfig = [sidebarSection];
 
   const files = readdirSync(dir) || [];
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stats = statSync(filePath);
-
     // 对于目录
     if (stats.isDirectory()) {
       const childItems = generate(notesRootPath, file, relDir, depth + 1);
@@ -40,7 +38,6 @@ function generate(notesRootPath, pagePath, prefix = "", depth = 0) {
     }
     // 对于文件
     else {
-      // 索引文件
       const fileName = file.replace(/\.md$/, "");
       // 处理非 md 文件
       if (file === fileName) continue;
@@ -50,16 +47,17 @@ function generate(notesRootPath, pagePath, prefix = "", depth = 0) {
       const rawLink = path.join(relDir, fileName);
       const normalizedLink = rawLink.split("\\").join("/");
       const itemData = {
-        ...data,
+        // ...data,
         link: normalizedLink,
       };
 
       // 处理 index 文件
-      if (fileName === INDEX_FILE) sidebarSection = { ...itemData, ...sidebarSection };
-      else sidebarSection.items.push({ ...itemData, text: transformName(fileName) });
+      if (fileName === INDEX_FILE) {
+        sidebarSection = { ...itemData, ...sidebarSection };
+      } else sidebarSection.items.push({ ...itemData, text: transformName(fileName) });
     }
   }
-  return sidebarConfig;
+  return [sidebarSection];
 }
 
 /**
