@@ -15,7 +15,7 @@
 <script setup>
 import { VPTeamPage, VPTeamPageTitle } from "vitepress/theme";
 import ProjectCard from "./ProjectCard.vue";
-import { projectsInfo } from "./data/projectsInfo";
+import { projectsInfo } from "../userConfig/projectsInfo";
 </script>
 
 <style scoped>

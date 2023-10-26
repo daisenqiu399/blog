@@ -35,11 +35,6 @@
   );
 }
 
-.VPContent {
-  @apply flex flex-col;
-  @apply bg-zinc-50 dark:bg-[#1b1b1f];
-}
-.VPContent.has-sidebar,
-.VPContent.is-home {
-  @apply bg-white dark:bg-[#1b1b1f];
+.VPSidebar::-webkit-scrollbar {
+  @apply hidden;
 }

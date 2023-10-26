@@ -22,15 +22,15 @@ features:
     title: Diverse Learning Notes
     details: A comprehensive collection of my frontend development learning notes.
     link: /Notes/index
-    linkText: '学习笔记'
+    linkText: "学习笔记"
   - icon: 🦄
     title: Creative Tech Projects
     details: Dive into my innovative projects and playful creations.
     link: /Projects
-    linkText: '项目简历'
+    linkText: "项目简历"
   - icon: 👫
     title: Community Connections
     details: Discover a network of my friends' blogs and personal websites.
     link: /Friends
-    linkText: '友情链接'
+    linkText: "友情链接"
 ---
