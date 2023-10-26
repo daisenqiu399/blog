@@ -3,19 +3,22 @@ layout: page
 sidebar: false
 
 hero:
-  title: "Document"
-  subTitle: "📚 欢迎来到本项目的使用说明书"
+  title: "Blogs"
+  subTitle: "想吃榛子巧克力味蛋糕"
 
 types:
-  - name: "使用指南"
-    desc: "How to Use"
-    link: "/Notes/0tutorial/quickstart"
-    icon: "✨"
   - name: "面经分享"
-    desc: "interview experiences"
+    desc: "Interview experiences"
     link: "/Notes/Interviews/"
+    icon: "✨"
+  - name: "学习笔记"
+    desc: "Learning Notes"
+    link: "/Notes/Learning/"
     icon: "🏃"
-# flow: true
+  - name: "随想杂文"
+    desc: "personal musings"
+    link: "/Notes/Thoughts"
+flow: true
 ---
 
 <script setup>

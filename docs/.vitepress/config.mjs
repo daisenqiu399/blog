@@ -31,7 +31,6 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: "https://github.com/ZbWeR" }],
     // 首页底部版权声明
     footer: {
-      message: "Released under the MIT License.",
       copyright: "Copyright © 2023-present zbwer",
     },
     // 文章内导航栏标题
@@ -45,6 +44,10 @@ export default defineConfig({
           replacement: fileURLToPath(
             new URL("./components/UpdateTime.vue", import.meta.url)
           ),
+        },
+        {
+          find: /^.*\/VPFooter\.vue$/,
+          replacement: fileURLToPath(new URL("./components/Footer.vue", import.meta.url)),
         },
       ],
     },
