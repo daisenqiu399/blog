@@ -10,7 +10,7 @@ types:
   - name: "面经分享"
     desc: "Interview experiences"
     link: "/Notes/Interviews/"
-    icon: "✨"
+    icon: "📝"
   - name: "学习笔记"
     desc: "Learning Notes"
     link: "/Notes/Learning/"
@@ -18,7 +18,7 @@ types:
   - name: "随想杂文"
     desc: "personal musings"
     link: "/Notes/Thoughts"
-flow: true
+# flow: true
 ---
 
 <script setup>
