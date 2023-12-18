@@ -124,4 +124,12 @@ export const friendsInfo: Friend[] = [
     tag: "CNSS / SA",
     color: "indigo",
   },
+  {
+    avatar: "https://avatars.githubusercontent.com/u/108560334?v=4",
+    name: "ma5hr00m",
+    title: "炒鸡厉害的前端学弟🏆",
+    link: "https://ma5hr00m.top/",
+    tag: "Web Develop",
+    color: "orange",
+  },
 ];
