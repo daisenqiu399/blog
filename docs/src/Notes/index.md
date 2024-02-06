@@ -17,7 +17,7 @@ types:
     icon: "🏃"
   - name: "随想杂文"
     desc: "personal musings"
-    link: "/Notes/Thoughts"
+    link: "/Notes/Thoughts/"
 # flow: true
 ---
 
