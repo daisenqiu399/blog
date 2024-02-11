@@ -61,7 +61,7 @@ export const friendsInfo: Friend[] = [
     color: "indigo",
   },
   {
-    avatar: "https://sakee.cn/image/friends/Timlzh.jpg",
+    avatar: "https://avatars.githubusercontent.com/u/25294996?v=4",
     name: "Timlzh",
     title: "🥳全体起立!!!",
     link: "https://www.cnblogs.com/timlzh",
