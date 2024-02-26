@@ -5,6 +5,10 @@ tags: "八股/Vue"
 outline: deep
 ---
 
+## Vue3 生命周期
+
+![](https://cn.vuejs.org/assets/lifecycle_zh-CN.FtDDVyNA.png)
+
 ## V-if 与 V-show 的区别
 
 - `v-if` 是真正的条件渲染，当条件值为 false 时，组件不会被渲染，即不会在 DOM 中存在。它确保了在切换时，条件区块内的事件监听器和子组件都会被销毁与重建，这意味着如果切换带有输入框的表单，你将会丢失所有的已输入内容。
