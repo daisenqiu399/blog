@@ -1,6 +1,6 @@
 ---
-updateTime: "2023-11-21 23:53"
-desc: "Vue 八股文の个人理解"
+updateTime: "2024-03-10 11:24"
+desc: "Vue 八股文の个人理解，包括响应式原理、Pinia 原理与简单实现、router 简要原理"
 tags: "八股/Vue"
 outline: deep
 ---
@@ -51,3 +51,173 @@ outline: deep
 在读取操作的拦截器中我们跟踪副作用函数，在设置操作的拦截器中我们触发副作用函数的重新执行。这就是 Vue 响应式系统的基本原理。
 
 更复杂的内容包括：副作用函数的嵌套，分支切换导致的副作用依赖变化，数组的响应式等等。还有响应式系统的可调度行，computed 于 watch 的实现等等。
+
+### Vue2 与 Vue3 的响应式原理的区别
+
+Vue2 的响应式原理是基于 Object.defineProperty 实现的，而 Vue3 的响应式原理是基于 Proxy 实现的。Proxy 相比 Object.defineProperty 具有更多的优势，例如：
+
+- Proxy 可以直接监听对象而非属性，所以我们不需要为每个属性都写一遍 set 和 get；
+- Proxy 有不仅可以监听对象的读写操作，还可以监听对象的扩展、删除、枚举等操作。
+- Proxy 返回的是一个新对象，我们可以只操作新的对象达到目的对象的效果，而 Object.defineProperty 只能遍历对象属性直接修改。
+- Proxy 进行深层次代理时，只有深层次的属性被访问时才会触发代理，而 Object.defineProperty 需要一次性递归完对象的所有属性，这意味着 Proxy 的初始化开销更小。
+
+简而言之，Proxy 更加灵活易用，在处理深层次对象时性能更好。
+
+### Vue3 响应式中用到了 Reflect, 它有什么作用
+
+- Reflect 与 Proxy 总是搭配使用的，他们具有的陷阱方法是一一对应的。
+- Reflect 更加健壮，当我们设置一个对象上不存在的属性时，Proxy 会抛出错误，而 Reflect 会返回 false，这意味着我们可以更加灵活的处理这种情况。
+- Reflect 的某些方法具有一个 `receiver` 参数，这个参数通常用来指定 Proxy 的执行上下文，在一些场景下会更加灵活，例如对象继承中 this 的指向。
+
+```js
+const person = {
+  _name: "Person",
+  get name() {
+    return this._name;
+  },
+};
+const proxyPerson = new Proxy(person, {
+  get: (target, key, receiver) => {
+    console.log("[get]: ", key);
+    return Reflect.get(target, key, receiver); // 17 行将会打印 Tom
+    return target[key]; // 17行将会打印 Person
+  },
+});
+const tom = { _name: "Tom" };
+Object.setPrototypeOf(tom, proxyPerson);
+console.log(tom.name);
+```
+
+## Pinia 原理
+
+Pinia 是 Vue 的专属状态管理库，允许用户跨界面共享状态。其主要的 API 有两个，一个是 `createPinia`，用于创建一个 Pinia 实例；另一个是 `defineStore`，用于定义一个状态仓库。
+
+- 在创建 Pinia 全局对象时，我们会借助 Vue 提供的 `provide` API 将该实例注入到根组件中，每一个子组件都可以通过 `inject` API 来获取这个实例。这个实例上具有一个 `_s` 属性，这是一个 Map 类型的变量，用于存储所有的状态仓库。
+- 在使用 `defineStore` 时，我们通常会传入状态仓库的名称以及 `state, actions, getters` 等属性。在这个函数内部，我们首先会利用 `reactive` API 创建一个空的响应式对象，随后我们会将 `state, actions, getters` 等属性挂载到这个对象上。最后我们将会通过 `inject` API 获取到 Pinia 实例，然后在实例的 `_s` 属性中存储这个状态仓库。
+
+总的来说，Pinia 的原理就是利用 Vue 的 `provide` 和 `inject` API 来实现状态仓库的全局共享，利用 `reactive` API 来实现状态仓库的响应式。
+
+::: details miniPinia 实现代码
+
+```typescript
+import { computed, inject, reactive } from "vue";
+const piniaSymbol = Symbol("pinia");
+
+interface Pinia {
+  _s: Map<string, any>;
+}
+
+export const createPinia = () => {
+  const pinia = {
+    _s: new Map(),
+    install(app: any) {
+      app.provide(piniaSymbol, pinia);
+    },
+  };
+  return pinia;
+};
+
+type StoreAction = {
+  [key: string]: (...args: any[]) => void;
+};
+
+interface StoreOption {
+  state: () => any;
+  actions?: StoreAction;
+  getters?: any;
+}
+
+export const defineStore = (id: string, options: StoreOption) => {
+  const store = reactive<Record<string, any>>({});
+
+  const { state, actions, getters } = options;
+
+  if (state && typeof state === "function") {
+    const _state = state();
+    for (const key in _state) {
+      store[key] = _state[key];
+    }
+  }
+
+  if (getters && Object.keys(getters).length) {
+    for (const getter in getters)
+      store[getter] = computed(getters[getter].bind(store, store));
+  }
+
+  function warpAction(methodName: string) {
+    return (...args: any[]) => {
+      actions![methodName].apply(store, args);
+    };
+  }
+
+  if (actions && Object.keys(actions).length) {
+    for (const action in actions) {
+      store[action] = warpAction(action);
+    }
+  }
+
+  return () => {
+    const pinia: Pinia = inject(piniaSymbol)!;
+    if (!pinia._s.has(id)) {
+      pinia._s.set(id, store);
+    }
+    const _store = pinia._s.get(id);
+    return _store;
+  };
+};
+```
+
+:::
+
+## Vue-Router 原理
+
+> 简而言之，Vue-Router 的原理就是监听 URL 的变化，根据 URL 的变化来动态渲染 UI。
+> 在 hash 模式下，我们可以监听 `hashchange` 事件；
+> 在 history 模式下，我们可以监听 `popstate` 事件并利用 `history.pushState` 方法来改变 URL。
+
+对于单页面应用来说，路由描述的是 URL 与 UI 之间的映射关系，我们希望根据 URL 的变化来动态渲染 UI 而不用向服务器发起请求。那么要实现前端路由，需要解决两个核心问题：
+
+1. 如何改变 URL 而不引起页面的刷新？
+2. 如何检测 URL 是否发生了变化？
+
+在使用 Vue-Router 时，我们可以选择两种模式，一种是 hash 模式，另一种则是 history 模式。这两个模式的区别就在于 URL 的表现形式不同。在 hash 模式下，URL 会带有 `#` 号，而在 history 模式下则不会。这两种模式的实现原理也不同。我们分情况进行讨论。
+
+### hash 模式
+
+什么是 hash ？ hash 是 URL 中 `#` 号后面的部分，常用作锚点在页面内进行导航，改变 URL 中的 hash 不会引起页面的刷新，这个特性正好符合我们的需求。至于第二个问题，如何检测 URL 是否发生了变化，我们可以在 `window` 上监听 `hashchange` 事件。
+
+```js
+const contentEl = document.getElementById("content");
+const routes = {
+  "/user": "<h1>User</h1>",
+  "/about": "<h1>About</h1>",
+  "/home": "<h1>Home</h1>",
+};
+window.addEventListener("hashchange", () => {
+  const path = window.location.hash.slice(1);
+  contentEl.innerHTML = routes[path];
+});
+```
+
+### history 模式
+
+在点击 a 标签时会触发浏览器的默认行为，即跳转到目标页面，这个过程会引起页面的刷新。我们可以使用 `e.preventDefault()` 来阻止这个默认行为，然后使用 HTML5 提供的 `history.pushState` 方法来改变 URL。这个方法接受三个参数，分别是状态对象、标题、URL。这样我们就可以改变 URL 而不引起页面的刷新。在 a 标签的点击事件中，我们显然知道 URL 发生了变化，所以我们可以在这个时候进行 UI 的更新。然而 URL 的改变还可能是因为浏览器的前进后退按钮，这时候我们可以监听 `popstate` 事件。
+
+```js
+// 处理浏览器的前进后退按钮
+window.addEventListener("popstate", () => {
+  contentEl.innerHTML = routes[window.location.pathname];
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  contentEl.innerHTML = routes[window.location.pathname];
+  const links = document.querySelectorAll("a");
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault(); // 阻止默认跳转行为
+      history.pushState(null, "", e.target.href); // 手动改变 URL
+      contentEl.innerHTML = routes[e.target.pathname]; // 更新 UI
+    });
+  });
+});
+```
