@@ -32,6 +32,8 @@ outline: deep
 
 ![类型转换规则](./img/类型转换规则.jpg)
 
+### 变量提升
+
 ## 原型与原型链
 
 在 JavaScript 中，每个构造函数都具有 prototype 属性，它是一个指向原型对象的指针，原型对象上存放着一些公有的方法和属性。
@@ -109,3 +111,9 @@ function myNew(constructor, ...args) {
 ## Promise
 
 ## 垃圾回收
+
+## TypeScript
+
+### 常见的工具函数
+
+<LinkCard link="https://juejin.cn/post/7084241167696527396" desc="学习Typescript泛型工具函数，看这一篇就够了 | 掘金" />
