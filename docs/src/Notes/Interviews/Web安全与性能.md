@@ -81,9 +81,17 @@ Cache-control: max-age=2592000 no-cache
 
 对于复杂请求，浏览器会首先发送一个预检（preflight）请求，这通常是一个 <HText type="true">OPTIONS</HText> 方法的请求。预检请求中会包含 `Access-Control-Request-Headers / Methods` 等字段，用以表示实际请求中将会使用的 HTTP 方法和头信息等。服务器会根据这些信息来决定是否允许实际的请求。如果服务器允许，它会在响应头中添加 `Access-Control-Allow-Headers` 和其他相关字段。浏览器将根据这些响应头来决定是否继续发送实际的请求。如果不允许，浏览器将返回一个错误 ⚡。
 
-## CSRF 攻击 🚧
+## Web 安全
+
+### CSRF 攻击 🚧
 
 那么什么是 CSRF 攻击呢，举一个简单的例子，现在你登录了 bank.com 这个网站，网站中记录了你的 cookie 信息，然后你又打开了一个标签页，在这个标签页中，你访问了一个恶意网站 evil.com，这个网站中存在一些恶意脚本，当你点击某个按钮时，这些脚本就会向 bank.com 发送请求，这时候浏览器会携带上 bank.com 的 cookie 信息，这样恶意网站就可以利用这些信息进行一些恶意操作，例如转账等等。而同源策略就是为了防止这种情况的发生，它会阻止恶意网站获取 bank.com 的响应数据。（但并不能完全解决 CSRF 问题，更好的方案是使用 cookie 的 sameSite 字段以及服务器动态生成 CSRF Token）
+
+### XSS 攻击 🔒
+
+### SQL 注入 🔑
+
+## HTTP 1.0/1.1/2.0
 
 ## 输入 URL 到页面展示的过程 🎨
 
