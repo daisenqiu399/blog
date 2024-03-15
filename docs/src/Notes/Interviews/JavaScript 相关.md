@@ -8,7 +8,12 @@ outline: deep
 ## 数据类型相关
 
 - 基本类型：Number, String, Boolean, Symbol, BigInt, null, undefined
-- 引用类型：Object(Array, Function, Set, Map...)
+- 引用类型：Object(Array, Set, Map...), Function
+
+**二者区别**：
+
+- 基本类型：按值访问，直接存储在栈内存之中，值的复制是直接创建一个副本。
+- 引用类型：按引用访问，数据存储在堆内存之中，栈内存中存储的是指向堆内存的指针。复制时只是复制了引用，而不是对象本身，当一个对象被多个变量引用时，修改其中一个变量的值会影响其他变量。
 
 ### null 与 undefined
 
@@ -26,13 +31,64 @@ outline: deep
 
 - 弱等于 `==`：只进行值比较，在比较时会先进行类型转换。
 - 强等于 `===`: 先进行类型判断，如果类型不同，直接返回 false，如果类型相同，再进行值的比较。
-- `Object.is()`:
+- `Object.is()`: 主要用于处理 `NaN` 和 `+0/-0` 的特殊情况。
+
+一般情况下 `NaN==NaN` 会返回 `false`, `+0==-0` 会返回 `true`, 而 `Object.is(NaN,NaN)` 会返回 `true`, `Object.is(+0,-0)` 会返回 `false`.
 
 ### 类型转换规则
 
+发生类型转换的情况：
+
+1. 加减乘除运算：`+` 运算符会进行字符串拼接，而其他的运算符都会进行数值转换。
+2. 弱等于 `==` 运算符：会进行类型转换再进行比较。
+3. `if` 语句：会进行布尔值转换。
+4. 强制类型转换：`Number()`、`String()`、`Boolean()`等等。
+
 ![类型转换规则](./img/类型转换规则.jpg)
 
-### 变量提升
+### 判断数据类型的方法
+
+1. `typeof`：只能用于判断**基本类型与函数**，对于其他任何对象都会返回 `object`。
+2. `instanceof`：通常用于判断**对象**的具体类型，例如 `arr instanceof Array`。其原理是检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。
+3. `Object.prototype.toString.call()`：通用的判断方法，可以判断任何类型的数据。
+
+### const / let / var
+
+- `var`：声明的变量会被提升到**函数作用域**的顶部，如果没有声明函数作用域，那么会被提升到全局作用域的顶部。**可以重复声明**。
+- `let & const`：声明的变量会被提升到**块级作用域**的顶部，但是存在**暂时性死区**。不可以重复声明。区别是 `let` 可以修改值，`const` 不可以修改值。
+
+:::code-group
+
+```js [var 变量提升]
+function test() {
+  console.log(a); // undefined
+  var a = 1;
+  console.log(a); // 1
+}
+// 以上代码与以下代码等价
+
+function test() {
+  var a;
+  console.log(a); // undefined
+  a = 1;
+  console.log(a); // 1
+}
+```
+
+```js [const/let 变量提升]
+// 存在变量提升，但也存在暂时性死区。
+function test() {
+  console.log(a); // ReferenceError: Cannot access 'a' before initialization
+  let a = 1;
+  console.log(a);
+}
+```
+
+:::
+
+### 词法作用域
+
+在 JavaScript 中具有三种作用域：全局作用域、函数作用域、块级作用域（ES6 新增，通过一对花括号或代码块定义）。如果一个变量或表达式不在当前作用域中，那么它就是不可用的。作用域可以堆叠成一个作用域链，当我们访问一个变量时，会先从当前作用域开始查找，如果没有找到，就会去上一级作用域查找，直到找到为止。需要注意的是，父级作用域无法访问子级作用域的变量。
 
 ## 原型与原型链
 
