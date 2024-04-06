@@ -16,7 +16,7 @@ export const projectsInfo: Project[] = [
     title: "Feishu&ChatGPT",
     description:
       "将 chatGPT 接入飞书对话机器人，支持上下文对话与人格预设，并使用aircode一键部署",
-    link: "https://github.com/ZbWeR/feishu-chatGPT-plus",
+    link: "https://github.com/ZbWeR/feishu-chatGPT-plus-aircode",
     tag: "JavaScript",
   },
   {
