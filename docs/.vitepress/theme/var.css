@@ -38,3 +38,23 @@
 .VPSidebar::-webkit-scrollbar {
   @apply hidden;
 }
+
+/* 主页标题设置, 采用自定义的图片 */
+.main .name {
+  background-image: url("/title.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 出于 seo 考虑, 保留原始文字但是将其隐藏 */
+.main .name .clip {
+  visibility: hidden;
+}
+
+/* 移动端适配: 居中显示 */
+@media (min-width: 960px) {
+  .main .name {
+    background-position: initial;
+  }
+}
