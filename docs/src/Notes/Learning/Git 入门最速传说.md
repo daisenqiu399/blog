@@ -174,3 +174,26 @@ git checkout your_dev_name
 git rebase master
 git stash pop
 ```
+
+#### 4.压缩 Commit 美化提交记录
+
+你的开发分支有很多次提交，有的时候（例如公司规范）需要压缩成一个提交。
+
+```bash
+# 选择需要压缩的提交
+git rebase -i HEAD~<num>
+# 在 VSCode 中选择需要保留的提交
+# 保存退出后会自动合并提交, 随后处理冲突
+# 如果你的分支已经推送到远程仓库，需要强制推送
+git push -f
+```
+
+#### 5. Code Review 存在问题需要修改
+
+你的代码提交到远程仓库提交了 Pull Request ，在进行 Code Review 时发现了问题，需要修改。
+
+```bash
+git add .
+git commit --amend
+git push -f
+```
