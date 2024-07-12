@@ -58,3 +58,12 @@
     background-position: initial;
   }
 }
+
+/* 链接不要下划线！ */
+.vp-doc a {
+  text-decoration: none !important;
+}
+
+.vp-doc a:hover {
+  text-decoration: underline !important;
+}
