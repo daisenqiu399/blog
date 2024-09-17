@@ -81,3 +81,8 @@
 .medium-zoom--opened .medium-zoom-overlay {
   opacity: 0.9 !important;
 }
+
+/* VPTeam页面调整margin */
+.VPTeamPage {
+  margin: 0 !important;
+}
