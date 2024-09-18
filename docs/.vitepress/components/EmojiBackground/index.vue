@@ -46,7 +46,20 @@ const useEmojiBackground = () => {
     const height = emojiBgRef.value?.clientHeight || 0
     const countLines = Math.floor(height / 40)
     const emojiPerLine = Math.floor(window.innerWidth / 40) * 2
-    renderEmojis.value = new Array(countLines).fill(0).map(() => randomEmojis(emojiPerLine))
+    const interval = 5;
+
+    const renderChunk = (start:number,end:number) => {
+      if(start >= end) return;
+
+      const chunk = new Array(Math.min(end,countLines) - start).fill(0).map(() => randomEmojis(emojiPerLine))
+      renderEmojis.value = [...renderEmojis.value, ...chunk]
+
+      requestAnimationFrame(() => {
+        renderChunk(end,end + interval)
+      })
+    }
+    renderEmojis.value = []
+    renderChunk(0,interval)
   }
 
   return { renderEmojis, getRenderEmojis, emojiBgRef, getRadomStyle }
