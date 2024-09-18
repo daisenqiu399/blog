@@ -1,10 +1,10 @@
 <template>
   <div class="home flex h-screen w-screen items-center justify-center">
     <EmojiBackground />
-    <div class="flex w-screen animate-scale-in-center flex-col px-4 sm:w-[626px]">
-      <div ref="lottieRef" class="-mt-10 sm:-mt-20 w-full sm:w-[626px]"></div>
+    <div class=" -mt-10 sm:-mt-40 flex w-screen animate-scale-in-center flex-col px-4 sm:w-[626px]">
+      <Vue3Lottie :animationData="lottieData" class=" w-full sm:w-[626px]" />
       <div
-        class="mt-6 flex w-full flex-col items-center rounded-lg bg-white/85 py-6 text-zinc-800 shadow shadow-black/20 backdrop-blur-sm"
+        class="mt-6 flex w-full flex-col items-center rounded-lg bg-white/85  py-6 text-zinc-800 shadow shadow-black/40 backdrop-blur-sm relative"
       >
         <div class="text-2xl font-bold sm:text-3xl">
           <span class="shake-hand inline-block">👋</span> Hi, I am
@@ -12,9 +12,8 @@
             >Bowen Zhang</span
           >.
         </div>
-
-        <p class="mt-2 text-lg">Chinese student / Front-end developer</p>
-
+        <p class="mt-2 sm:text-lg text-base">UESTC / Cat Cult / Front-End Developer</p>
+        <p class="mt-1 text-black/50">“地球其实只是一个柯基的屁股”</p>
         <div class="mt-4 flex gap-4">
           <div
             @click="router.go('/Notes/')"
@@ -36,31 +35,21 @@
 </template>
 
 <script setup lang="ts">
-import Lottie from 'lottie-web'
 import { onMounted, ref, onBeforeUnmount } from 'vue'
 import EmojiBackground from '../../components/EmojiBackground/index.vue'
-import animationData from '../../assets/dora.json'
 import { RiGithubLine } from '@remixicon/vue'
 import { useRouter } from 'vitepress'
+import { Vue3Lottie } from 'vue3-lottie'
+import lottieData from '../../assets/dora.json'
 
-const lottieRef = ref<HTMLDivElement | null>(null)
 const returnToTopRef = ref<HTMLElement | null>(null)
 
 const router = useRouter()
-
 const gotoGithub = () => {
   window.open('https://github.com/zbwer')
 }
 
 onMounted(() => {
-  Lottie.loadAnimation({
-    container: lottieRef.value!,
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    animationData: animationData
-  })
-
   returnToTopRef.value = document.querySelector('.VPLocalNav.empty.fixed')
   if (returnToTopRef.value) returnToTopRef.value.style.zIndex = '-1000'
 })

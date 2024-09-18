@@ -1,7 +1,5 @@
 ---
-navbar: false
-footer: false
-layout: page
+layout: false
 ---
 
 <script setup>
