@@ -9,7 +9,7 @@
       <LinkText
         text="Easy-Vitepress-Blog"
         link="https://github.com/ZbWeR/easy-vitepress-blog"
-        :icon="ArrowTopRightOnSquareIcon"
+        :icon="RiExternalLinkLine"
       />
     </p>
   </footer>
@@ -18,9 +18,9 @@
 <script setup lang="ts">
 import { useData, useRoute } from 'vitepress'
 import LinkText from './LinkText.vue'
-import ArrowTopRightOnSquareIcon from '@heroicons/vue/16/solid/esm/ArrowTopRightOnSquareIcon'
 import { computed } from 'vue';
 import { useSidebar } from 'vitepress/theme';
+import { RiExternalLinkLine } from '@remixicon/vue';
 
 const { theme, frontmatter } = useData()
 const { footer } = theme.value
