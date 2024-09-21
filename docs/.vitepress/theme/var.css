@@ -59,13 +59,9 @@
   }
 }
 
-/* 链接不要下划线！ */
+/* 链接美化 */
 .vp-doc a {
-  text-decoration: none !important;
-}
-
-.vp-doc a:hover {
-  text-decoration: underline !important;
+  @apply hover:text-blue-500 after:hover:opacity-100 dark:hover:text-blue-400;
 }
 
 /* 图片预览 */
