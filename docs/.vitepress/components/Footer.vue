@@ -24,10 +24,10 @@ import { RiExternalLinkLine } from '@remixicon/vue';
 
 const { theme, frontmatter } = useData()
 const { footer } = theme.value
+const { hasSidebar } = useSidebar()
 
 const showFooter = computed(()=>{
   const footer:boolean = frontmatter.value.footer ?? true;
-  const { hasSidebar } = useSidebar();
   // 当侧边栏可见时，不显示页脚
   return footer && !hasSidebar.value;
 })
