@@ -1,46 +1,62 @@
 <template>
   <div
     @click="openLink"
-    class="flex flex-col items-center w-full h-full p-6 transition-all duration-300 border cursor-pointer bg-stripe group hover:border-indigo-800 dark:hover:border-sky-300 dark:border-transparent bg-slate-50 dark:bg-slate-800 dark:text-slate-300 rounded-xl"
+    class="group flex h-full w-full cursor-pointer flex-col items-center rounded-xl border bg-slate-50 px-5 py-4 transition-all duration-300 hover:border-indigo-800 dark:border-transparent dark:bg-slate-800 dark:text-slate-300 dark:hover:border-sky-300"
+    :class="isMe ? 'bg-me-card cursor-default' : 'bg-stripe cursor-pointer'"
   >
-    <!-- 头像 -->
-    <div class="w-16 h-16 overflow-hidden rounded-full VP-shadow">
-      <img :src="avatar" :alt="name" />
-    </div>
-    <!-- 简介 -->
-    <div class="w-full text-center">
-      <h1 class="text-lg font-bold tracking-wider dark:text-zinc-200">
-        {{ name }}
-      </h1>
-      <div>
-        <Badge :color="color || 'sky'">{{ tag }}</Badge>
+    <div class="flex w-full items-center gap-5">
+      <!-- 头像 -->
+      <div class="VP-shadow h-[70px] w-[70px] flex-shrink-0 overflow-hidden rounded-full">
+        <img v-if="avatar" :src="avatar" :alt="name" />
+        <img v-else src="./img/avatar-fallback.png" alt="默认头像" />
       </div>
-      <p class="w-full mt-1 break-words line-clamp-2 dark:text-zinc-400">
-        {{ title }}
-      </p>
-      <p
-        class="inline-block mt-2 text-sm text-indigo-400 transition-all duration-300 border-b border-indigo-400 dark:text-sky-400 dark:border-sky-400 sm:opacity-0 group-hover:opacity-100"
-      >
-        🔗{{ shortLink }}
-      </p>
+      <!-- 简介 -->
+      <div class="flex-1">
+        <div class="flex w-full items-center justify-between">
+          <h1 class="text-lg font-bold tracking-wider dark:text-zinc-200">
+            {{ name }}
+          </h1>
+          <Badge
+            class="transition-all duration-300 group-hover:opacity-100"
+            :color="color"
+            :class="isMe ? '' : 'opacity-0'"
+            :light="true"
+          >
+            {{ tag }}
+          </Badge>
+        </div>
+        <p class="mt-1 line-clamp-2 w-full break-words dark:text-zinc-400">
+          {{ title }}
+        </p>
+        <div
+          class="mt-1 flex items-center gap-1 text-sm text-black/40 group-hover:text-sky-400 dark:text-white/40"
+          :class="isMe ? 'text-sky-400 dark:text-sky-400' : 'text-black/40'"
+        >
+          <p>{{ shortLink }}</p>
+          <RiExternalLinkLine v-if="!isMe" class="h-[15px] w-[15px]" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
-<script setup>
-import { computed } from "vue";
-import Badge from "../components/Badge.vue";
+<script setup lang="ts">
+import { computed } from 'vue'
+import Badge from '../components/Badge.vue'
+import { RiExternalLinkLine } from '@remixicon/vue'
+import { Friend } from '../userConfig/friendsInfo';
 
-const friendsInfo = defineProps(["avatar", "name", "title", "link", "tag", "color"]);
+const friendsInfo = defineProps<Friend>()
 
 const shortLink = computed(() => {
-  let baseLink = friendsInfo.link;
-  const regex = /^(http|https):\/\/(.*)$/;
-  return baseLink.replace(regex, "$2");
-});
+  let baseLink = friendsInfo.link
+  const regex = /^(http|https):\/\/(.*?)(\/)?$/
+  return baseLink.replace(regex, '$2')
+})
 
 function openLink() {
-  window.open(friendsInfo.link, "_blank");
+  if (friendsInfo.isMe) return
+  window.open(friendsInfo.link, '_blank')
 }
 </script>
 
@@ -65,5 +81,16 @@ function openLink() {
     hsl(200, 80%, 20%) 13px,
     hsl(200, 80%, 20%) 14px
   );
+}
+
+.bg-me-card {
+  background-size: 20px 20px;
+  background-image: linear-gradient(90deg, rgba(60, 10, 30, 0.1) 3%, transparent 0),
+    linear-gradient(1turn, rgba(60, 10, 30, 0.1) 3%, transparent 0);
+}
+.dark .bg-me-card {
+  background-size: 20px 20px;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 3%, transparent 0),
+    linear-gradient(1turn, rgba(255, 255, 255, 0.1) 3%, transparent 0);
 }
 </style>
