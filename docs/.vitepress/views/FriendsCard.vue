@@ -6,7 +6,7 @@
   >
     <div class="flex w-full items-center gap-5">
       <!-- 头像 -->
-      <div class="VP-shadow h-[70px] w-[70px] flex-shrink-0 overflow-hidden rounded-full">
+      <div class="VP-shadow sm:h-[70px] sm:w-[70px] h-14 w-14 flex-shrink-0 overflow-hidden rounded-full">
         <img v-if="avatar" :src="avatar" :alt="name" />
         <img v-else src="./img/avatar-fallback.png" alt="默认头像" />
       </div>
@@ -25,7 +25,7 @@
             {{ tag }}
           </Badge>
         </div>
-        <p class="mt-1 line-clamp-2 w-full break-words dark:text-zinc-400">
+        <p class="sm:text-base text-sm mt-1 line-clamp-2 w-full break-words dark:text-zinc-400">
           {{ title }}
         </p>
         <div

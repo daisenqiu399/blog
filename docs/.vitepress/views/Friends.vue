@@ -25,6 +25,7 @@ import FriendsCard from './FriendsCard.vue'
   max-width: 1152px;
   gap: 24px;
   margin: 0 auto;
+  padding-bottom: 24px;
   justify-content: center;
 }
 </style>
