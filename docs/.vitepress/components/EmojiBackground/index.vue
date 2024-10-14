@@ -50,6 +50,7 @@ const useEmojiBackground = () => {
 
     const renderChunk = (start:number,end:number) => {
       if(start >= end) return;
+      if(start >= countLines) return;
 
       const chunk = new Array(Math.min(end,countLines) - start).fill(0).map(() => randomEmojis(emojiPerLine))
       renderEmojis.value = [...renderEmojis.value, ...chunk]
