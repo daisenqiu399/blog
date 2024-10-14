@@ -98,6 +98,22 @@ export const friendsInfo: Friend[] = [
     color: 'indigo'
   },
   {
+    avatar: 'https://421zuoduan.github.io/images/acg_portrait.png',
+    name: '佐渡安',
+    title: '猫会死, 可现实一望无垠',
+    link: 'https://421zuoduan.github.io/',
+    color: 'orange',
+    tag: 'CV'
+  },
+  {
+    name: 'c0s1ne',
+    link: 'blog.cos02.top',
+    title: 'Keep Passion.',
+    avatar: 'https://avatars.githubusercontent.com/u/102515482?v=4',
+    color: 'pink',
+    tag: 'Front-end'
+  },
+  {
     avatar: 'https://avatars.githubusercontent.com/u/163713803?v=4',
     name: 'LofiSu',
     title: 'Learning is a lifelong journey.Keep going.',
@@ -105,4 +121,12 @@ export const friendsInfo: Friend[] = [
     tag: 'Front-end',
     color: 'sky'
   },
+  {
+    name: 'Kawhicurry',
+    title:"The future is already here.It's just not evenly distributed.",
+    link: 'https://kawhicurry.github.io/',
+    avatar: 'https://avatars.githubusercontent.com/u/68467656?v=4',
+    tag: 'SRE',
+    color: 'green'
+  }
 ]
