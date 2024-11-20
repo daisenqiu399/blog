@@ -8,7 +8,7 @@
       Theme |
       <LinkText
         text="Easy-Vitepress-Blog"
-        link="https://github.com/ZbWeR/easy-vitepress-blog"
+        link="https://github.com/daisenqiu399"
         :icon="RiExternalLinkLine"
       />
     </p>

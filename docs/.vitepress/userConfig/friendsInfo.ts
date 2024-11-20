@@ -10,123 +10,29 @@ export interface Friend {
 
 export const friendsInfo: Friend[] = [
   {
-    avatar: 'https://blog.zbwer.work/assets/avatar.BTzuv0Gg.jpg',
-    name: 'zbwer',
-    title: '地球其实只是一个柯基的屁股',
-    tag: 'Front-End Developer',
-    link: '欢迎交换友链！可参考此处信息',
+    avatar: 'https://avatars.githubusercontent.com/u/142326902?v=4',
+    name: '戴森球',
+    title: '永远相信美好的事情即将发生',
+    tag: '前端开发者',
+    link: '欢迎交换友链！',
     color: 'sky',
     isMe: true
   },
   {
-    avatar: 'https://avatars.githubusercontent.com/u/108560334?v=4',
-    name: 'Ma5hr00m',
-    title: '在摇摆与徘徊中前行',
-    link: 'https://blog.kinoko.fun/',
-    tag: 'Web Developer',
+    avatar: 'https://avatars.githubusercontent.com/u/49082837?v=4',
+    name: 'zbwer',
+    title: '字节，腾讯佬，来自电子科技大学',
+    link: 'https://blog.zbwer.work/',
+    tag: '前端开发工程师',
     color: 'orange'
   },
   {
-    avatar: 'https://avatars.githubusercontent.com/u/78269445?v=4',
-    name: 'mrcaidev',
-    title: 'Full-stack Developer.',
-    link: 'https://mrcai.dev/',
-    tag: 'UESTCer',
+    avatar: 'https://s11.aconvert.com/convert/p3r68-cdx67/x1o38-2wvj1.jpg',
+    name: 'Kaiven',
+    title: '医学生转码，全栈佬',
+    link: 'https://www.kaiven666.online/',
+    tag: '全栈开发',
     color: 'indigo'
   },
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/29620619?v=4',
-    name: 'Yaossg',
-    title: 'Awesome Computer Scientist',
-    link: 'https://Yaossg.com',
-    tag: 'DevOps',
-    color: 'pink'
-  },
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/108183563?v=4',
-    name: 'ZzzRemake',
-    title: 'Curious and Passionate',
-    link: 'https://zzzremake.github.io/',
-    color: 'indigo'
-  },
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/106670529?v=4',
-    name: '风唤长河',
-    title: 'Resourceful Developer',
-    link: 'https://ventusvocatflumen.cn/',
-    tag: 'Frontend',
-    color: 'sky'
-  },
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/64351788?v=4',
-    name: 'sake',
-    title: 'NLP Enthusiast',
-    link: 'https://sakee.cn/',
-    tag: 'INFJ',
-    color: 'orange'
-  },
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/25294996?v=4',
-    name: 'Timlzh',
-    title: 'Talented Hacker',
-    link: 'https://timlzh.com/',
-    tag: 'CTFer',
-    color: 'pink'
-  },
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/119086094?v=4',
-    name: '破酥',
-    title: '潮水蜂拥而至',
-    link: 'https://cainhappyfish.github.io/',
-    tag: 'UESTCer',
-    color: 'green'
-  },
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/91458671?v=4',
-    name: 'Rui1',
-    title: 'Visionary and Driven ',
-    link: 'https://blog.ruinique.cn/',
-    tag: 'Backend',
-    color: 'sky'
-  },
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/61999173?v=4',
-    name: 'syrinka',
-    title: 'Just Daydream',
-    link: 'https://blog.hareta.ren',
-    tag: 'CNSS',
-    color: 'indigo'
-  },
-  {
-    avatar: 'https://421zuoduan.github.io/images/acg_portrait.png',
-    name: '佐渡安',
-    title: '猫会死, 可现实一望无垠',
-    link: 'https://421zuoduan.github.io/',
-    color: 'orange',
-    tag: 'CV'
-  },
-  {
-    name: 'c0s1ne',
-    link: 'blog.cos02.top',
-    title: 'Keep Passion.',
-    avatar: 'https://avatars.githubusercontent.com/u/102515482?v=4',
-    color: 'pink',
-    tag: 'Front-end'
-  },
-  {
-    avatar: 'https://avatars.githubusercontent.com/u/163713803?v=4',
-    name: 'LofiSu',
-    title: 'Learning is a lifelong journey.Keep going.',
-    link: 'https://www.lofisu.chat/',
-    tag: 'Front-end',
-    color: 'sky'
-  },
-  {
-    name: 'Kawhicurry',
-    title:"The future is already here.It's just not evenly distributed.",
-    link: 'https://kawhicurry.github.io/',
-    avatar: 'https://avatars.githubusercontent.com/u/68467656?v=4',
-    tag: 'SRE',
-    color: 'green'
-  }
+
 ]

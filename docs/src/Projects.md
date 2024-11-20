@@ -1,9 +1,4 @@
 ---
-layout: page
+updateTime: '2024-11-20 23:28'
 ---
-
-<script setup>
-import Projects from "../.vitepress/views/Projects.vue";
-</script>
-
-<Projects/>
+# hello world

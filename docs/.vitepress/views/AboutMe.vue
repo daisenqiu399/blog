@@ -19,13 +19,13 @@
           style="top: 32%"
           class="tag-bounce hidden sm:block sm:left-[69%] md:left-[66%] lg:left-[63%] xl:left-[60%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
         >
-          🎵 二进制吟游诗人
+        😵诺贝尔文学奖候选人
         </p>
         <p
           style="top: 50%"
           class="tag-bounce hidden sm:block sm:left-[69%] md:left-[66%] lg:left-[63%] xl:left-[60%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
         >
-          绿茵场最佳气氛组⚽
+          想在火星开跑车🚗
         </p>
         <!-- Left-tags -->
         <p
@@ -38,7 +38,7 @@
           style="top: 50%"
           class="tag-bounce hidden sm:block sm:left-[8%] md:left-[13%] lg:left-[21%] xl:left-[27%] absolute px-3 py-0.5 text-sm font-bold rounded-full shadow-[0px_0px_1px_1px#eee]"
         >
-          宇宙无敌暴龙战士🚀
+          万物理论作者✅ 
         </p>
       </div>
       <!-- 概述与箴言 -->
@@ -50,9 +50,9 @@
           >
             <p class="text-lg text-slate-50">你好，很高兴认识你 👋</p>
             <h1 class="text-2xl font-bold xl:text-3xl lg:break-normal lg:break-words">
-              A Chinese undergraduate From UESTC
+              A Chinese undergraduate From GMU
             </h1>
-            <p class="text-slate-100">前端开发 / 产品设计 / 足球 🔥</p>
+            <p class="text-slate-100">前端开发 / 后端开发 / 篮球 🔥</p>
           </div>
           <!-- 箴言 -->
           <div
@@ -62,12 +62,12 @@
             <div>
               <h1 class="text-3xl leading-9">
                 <span class="hidden font-bold text-teal-400 md:inline-block"
-                  >Miracle&nbsp;
+                  >Everything&nbsp;
                 </span>
-                <span class="hidden lg:inline-block"> Is Everywhere</span>
+                <span class="hidden lg:inline-block"> Is possible</span>
               </h1>
               <h1 class="font-serif text-3xl tracking-widest md:text-2xl lg:text-3xl">
-                纵有<span class="font-bold text-sky-500">狂风</span>拔地起
+                永远<span class="font-bold text-sky-500">相信</span>美好的事情即将发生
               </h1>
               <h1 class="text-2xl leading-9 md:text-3xl">
                 <span class="inline-block font-bold text-teal-400 md:hidden"
@@ -88,8 +88,8 @@
           <p class="text-[12px]">简介</p>
           <div class="mt-2">
             <h1 class="text-xl">主修计算机科学与技术</h1>
-            <h1 class="text-xl">辅修<span class="text-pink-500">猫娘行为学</span></h1>
-            <h1 class="text-xl lg:text-xl md:text-base">梦想是做程序员烧烤领袖</h1>
+            <h1 class="text-xl">辅修<span class="text-pink-500">金融学，心理学</span></h1>
+            <h1 class="text-xl lg:text-xl md:text-base">戴森球计划策划者</h1>
             <p></p>
           </div>
         </div>
@@ -198,10 +198,10 @@
           class="bg-stripe w-full md:w-[50%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
         >
           <p class="text-[12px]">荣誉墙</p>
-          <h1 class="mt-2 text-4xl font-bold">追风赶月</h1>
+          <h1 class="mt-2 text-4xl font-bold">这些年走过的路</h1>
           <div class="mt-4 md:text-base lg:text-xl">
-            <p class="py-1">🏅 "创新创意创业"挑战赛省一等奖</p>
-            <p class="py-1">🥉 蓝桥杯 Web 开发组国家三等奖</p>
+            <p class="py-1">🏅 全国大学生数学建模省三等奖</p>
+            <p class="py-1">🥉 大数据挑战赛优秀奖</p>
             <p class="py-1">🥉 字节跳动前端青训大项目三等奖</p>
           </div>
         </div>
@@ -216,11 +216,10 @@
             class="absolute w-full h-full bg-center bg-no-repeat bg-cover music-bg"
           ></div>
           <div class="relative z-10 p-4">
-            <p class="text-[12px] text-slate-200">音乐喜好</p>
-            <h1 class="mt-1.5 text-4xl font-bold text-white">古典、</h1>
-            <h1 class="mt-1.5 text-4xl font-bold text-white">欧美流行、</h1>
-            <h1 class="mt-1.5 text-4xl font-bold text-white">轻音乐</h1>
-            <p class="text-sm text-right text-slate-100">《Love Stroy》</p>
+            <p class="text-[12px] text-slate-200">喜欢书籍</p>
+            <h1 class="mt-1.5 text-4xl font-bold text-white">瓦尔登湖</h1>
+            <h1 class="mt-1.5 text-4xl font-bold text-white">海底两万里</h1>
+            <p class="text-sm text-right text-slate-100">《万物理论》</p>
           </div>
         </div>
         <!-- 游戏 -->
@@ -231,10 +230,10 @@
             class="absolute w-full h-full bg-center bg-no-repeat bg-cover game-bg"
           ></div>
           <div class="relative z-10 flex flex-col justify-between h-full p-4">
-            <p class="text-[12px] text-slate-50">电子竞技</p>
-            <h1 class="flex-1 mt-2 text-4xl font-bold text-white">赛博种田 / FPS</h1>
+            <p class="text-[12px] text-slate-50">故乡的灯</p>
+            <h1 class="flex-1 mt-2 text-4xl font-bold text-white">达尔文效应</h1>
             <p class="self-end mt-2 text-sm text-right text-slate-100">
-              守望先锋 / FarmTogether
+              冯诺依曼
             </p>
           </div>
         </div>
@@ -255,7 +254,7 @@
               科幻 / <br />动漫影视剧
             </h1>
             <p class="self-end mt-2 text-sm text-right text-slate-100">
-              “不作恶,不快活！” ——《坏蛋联盟》
+              明日之星，我们永远渴望科技
             </p>
           </div>
         </div>
@@ -267,10 +266,10 @@
             class="absolute w-full bg-center bg-no-repeat bg-cover h-72 sport-bg"
           ></div>
           <div class="relative flex flex-col justify-between h-full p-4">
-            <p class="text-[12px] text-slate-50">体育运动</p>
-            <h1 class="flex-1 mt-2 text-4xl font-bold text-white">足球</h1>
+            <p class="text-[12px] text-slate-50">sport</p>
+            <h1 class="flex-1 mt-2 text-4xl font-bold text-white">篮球</h1>
             <p class="self-end mt-2 text-sm text-right text-slate-100">
-              欢迎来到梅西走廊！
+              最有价值的球员
             </p>
           </div>
         </div>
