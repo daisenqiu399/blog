@@ -27,7 +27,7 @@ export const friendsInfo: Friend[] = [
     color: 'orange'
   },
   {
-    avatar: 'https://s11.aconvert.com/convert/p3r68-cdx67/x1o38-2wvj1.jpg',
+    avatar: 'https://www.kaiven666.online/images/icon.jpg',
     name: 'Kaiven',
     title: '医学生转码，全栈佬',
     link: 'https://www.kaiven666.online/',
