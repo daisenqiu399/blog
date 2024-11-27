@@ -9,7 +9,7 @@ export default defineConfig({
   srcDir: "./src",
   lastUpdated: true,
   description:
-    "daisenqiu's tech blog: An undergraduate's journey through frontend development, sharing insights, tips, and experiences in web technologies.",
+    "戴森球的博客: An undergraduate's journey through frontend development, sharing insights, tips, and experiences in web technologies.",
   head: [["link", { rel: "icon", href: "/mylogo.png" }]],
   themeConfig: {
     logo: "/avatar.jpg",
