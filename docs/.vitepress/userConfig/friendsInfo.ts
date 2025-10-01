@@ -34,5 +34,22 @@ export const friendsInfo: Friend[] = [
     tag: '全栈开发',
     color: 'indigo'
   },
+  {
+    avatar: 'https://avatars.githubusercontent.com/u/87892141?v=4',
+    name: 'hedgeho_9',
+    title: '优秀的后端开发',
+    link: 'https://hedgeho9.cn/',
+    tag: '后端开发',
+    color: 'indigo'
+  },
+  {
+    avatar: 'https://avatars.githubusercontent.com/u/84165678?v=4',
+    name: '范文杰',
+    title: '字节跳动前端开发工程师',
+    link: 'https://tecvan.fun/',
+    tag: '高级前端开发工程师',
+    color: 'orange'
+  },
+ 
 
 ]

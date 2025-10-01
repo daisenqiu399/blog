@@ -12,8 +12,8 @@
             >戴森球</span
           >
         </div>
-        <p class="mt-2 sm:text-lg text-base">GMU / 前端开发</p>
-        <p class="mt-1 text-black/50">“永远相信美好的事情即将发生”</p>
+        <p class="mt-2 sm:text-lg text-base">GMU / 前端/移动端开发</p>
+        <p class="mt-1 text-black/50">“永远相信美好的事情即将发生,梦想是做一名CTO”</p>
         <div class="mt-4 flex gap-4">
           <div
             @click="router.go('/Notes/')"

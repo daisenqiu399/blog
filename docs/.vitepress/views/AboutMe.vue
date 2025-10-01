@@ -87,9 +87,10 @@
         >
           <p class="text-[12px]">简介</p>
           <div class="mt-2">
-            <h1 class="text-xl">主修计算机科学与技术</h1>
-            <h1 class="text-xl">辅修<span class="text-pink-500">金融学，心理学</span></h1>
-            <h1 class="text-xl lg:text-xl md:text-base">戴森球计划策划者</h1>
+            <h1 class="text-md">贵州医科大学/生物与工程学院/医学信息工程</h1>
+            <h1 class="text-sm">主修<span class="text-purple-500">生物信息学/基因组学/计算机科学与技术/临床医学</span></h1>
+            <h1 class="text-sm">辅修<span class="text-pink-500">金融学/心理学/篮球/民事诉讼法/教资</span></h1>
+            <h1 class="text-md lg:text-md md:text-base">梦想是做首席技术官，用科技让复杂的世界变得更加简单</h1>
             <p></p>
           </div>
         </div>
@@ -189,20 +190,30 @@
       </div>
       <!-- 图片与荣誉 -->
       <div class="flex flex-col justify-between w-full gap-5 mt-4 md:gap-0 md:flex-row">
-        <!-- 图片 -->
-        <div
-          class="w-full md:w-[45%] honer-bg bg-center bg-no-repeat bg-cover rounded-xl h-52 sm:h-auto"
-        ></div>
         <!-- 荣誉 -->
+        <div
+          class="bg-stripe w-full md:w-[49%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
+        >
+          <p class="text-[18px] text-green-600 text-2xl">offer经历，何时葡萄先熟透，你要静候在静候</p>
+          <div class="mt-4 md:text-base lg:text-md">
+           
+            <p class="py-1">📧 海康威视/国际业务中心/应用软件开发部/前端实习生</p>
+            <p class="py-1">📧 中文在线/技术部/技术创新部/前端实习生</p>
+            <p class="py-1">📧 科大讯飞/Ai资源部/交互能力组</p>
+            <p class="py-1">📧 海南华铁/前端实习生</p>
+            <p class="py-1">📧 高新兴集团/智慧政法事业部</p>
+
+          </div>
+        </div>
         <div
           class="bg-stripe w-full md:w-[50%] bg-slate-50 border dark:bg-slate-800 dark:border-slate-900 p-4 rounded-xl"
         >
           <p class="text-[12px]">荣誉墙</p>
-          <h1 class="mt-2 text-4xl font-bold">这些年走过的路</h1>
           <div class="mt-4 md:text-base lg:text-xl">
             <p class="py-1">🏅 全国大学生数学建模省三等奖</p>
-            <p class="py-1">🥉 大数据挑战赛优秀奖</p>
+            <p class="py-1">🥉 大数据挑战赛优秀奖/蓝桥杯省三等奖</p>
             <p class="py-1">🥉 字节跳动前端青训大项目三等奖</p>
+            <p class="py-1">🥉 国旗护卫队/中草药协会优秀部员</p>
           </div>
         </div>
       </div>
@@ -219,7 +230,7 @@
             <p class="text-[12px] text-slate-200">喜欢书籍</p>
             <h1 class="mt-1.5 text-4xl font-bold text-white">瓦尔登湖</h1>
             <h1 class="mt-1.5 text-4xl font-bold text-white">海底两万里</h1>
-            <p class="text-sm text-right text-slate-100">《万物理论》</p>
+            <p class="text-sm align-text-bottom text-slate-100">《万物理论》</p>
           </div>
         </div>
         <!-- 游戏 -->
@@ -249,12 +260,12 @@
             class="absolute w-full bg-center bg-no-repeat bg-cover h-72 movie-bg"
           ></div>
           <div class="relative z-10 flex flex-col justify-between h-full p-4">
-            <p class="text-[12px] text-slate-50">兴趣爱好</p>
+            <p class="text-[12px] text-slate-50">  <img class="w-24 p-0 m-0 absolute top-0 right-0" src="./img/tv.svg" alt="" /></p>
             <h1 class="flex-1 mt-2 text-4xl font-bold text-white">
-              科幻 / <br />动漫影视剧
+            科幻/动漫影视剧
             </h1>
             <p class="self-end mt-2 text-sm text-right text-slate-100">
-              明日之星，我们永远渴望科技
+              芒果tv热播短剧,戴森球集团赞助播出
             </p>
           </div>
         </div>

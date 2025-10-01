@@ -4,6 +4,9 @@ import "./tailwind.css";
 import "./var.css";
 import "./article.css";
 import "./print.css";
+// 引入elmeent-plux
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 
 import LinkCard from "../components/LinkCard.vue";
 import HText from "../components/HText.vue";
@@ -17,6 +20,9 @@ export default {
     ctx.app.component("LinkCard", LinkCard);
     ctx.app.component("HText", HText);
     ctx.app.component("Timeline", Timeline);
+    // 使用 ElementPlus
+    ctx.app.use(ElementPlus);
+    
   },
 
   setup() {
